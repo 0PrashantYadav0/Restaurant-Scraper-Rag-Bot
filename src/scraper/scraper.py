@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import time
+import uuid
 import random
 import re
 import os
@@ -39,10 +40,8 @@ class RestaurantScraper:
     def extract_data(self, soup, url):
         restaurant_info = {}
         
-        # Try to get restaurant name
+        restaurant_info['id'] = str(uuid.uuid4())
         restaurant_info['name'] = self.get_restaurant_name(soup, url)
-        
-        # Get other information
         restaurant_info['location'] = self.get_restaurant_location(soup)
         restaurant_info['menu'] = self.get_menu_items(soup)
         restaurant_info['special_features'] = self.get_special_features(soup)

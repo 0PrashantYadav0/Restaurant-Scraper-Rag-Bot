@@ -21,6 +21,7 @@ def scrape_data():
     logger.info("Starting data scraping...")
     scraper = RestaurantScraper(urls=Config.SCRAPER_URLS)
     scraper.scrape()
+    scraper.save_data(Config.RESTAURANT_DATA_FILE)
     logger.info("Data scraping completed!")
 
 def build_knowledge_base():
