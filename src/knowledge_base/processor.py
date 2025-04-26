@@ -399,7 +399,6 @@ def create_knowledge_base(input_file: Union[str, Path], output_dir: Union[str, P
         kb.save_knowledge_base(output_dir)
         
         logger.info(f"Knowledge base created and saved to {output_dir}")
-        logger.info(f"Processed {len(documents)} document chunks")
     except Exception as e:
         logger.error(f"Failed to create knowledge base: {e}")
         raise

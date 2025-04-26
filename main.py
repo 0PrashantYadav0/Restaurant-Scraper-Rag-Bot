@@ -12,7 +12,6 @@ logger = setup_logger(__name__)
 def setup_directories():
     """Set up the necessary directories"""
     Path("data/raw").mkdir(parents=True, exist_ok=True)
-    Path("data/processed").mkdir(parents=True, exist_ok=True)
     Path("models").mkdir(exist_ok=True)
     Path("models/index").mkdir(exist_ok=True)
 
