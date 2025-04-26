@@ -1,12 +1,11 @@
 import os
 import json
 from typing import List, Dict, Optional, Any
-from fastapi import FastAPI, WebSocket, HTTPException,Request, Depends
+from fastapi import FastAPI, WebSocket, HTTPException, Request, Depends
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, validator
-import io
 from pathlib import Path
 import traceback
 from contextlib import asynccontextmanager
@@ -102,7 +101,6 @@ async def serve_index():
 # Models for API requests/responses
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=1000)
-    restaurant_id: Optional[str] = None
     session_id: Optional[str] = None
     
     @validator('message')
@@ -137,18 +135,58 @@ async def get_models():
     }
 
 
-# Routes
-@app.post("/api/chat", response_model=ChatResponse)
+# ROUTE 1: Get list of restaurants with name and location
+@app.get("/api/restaurants")
+async def get_restaurants():
+    """Get a list of restaurants with their names and locations."""
+    restaurants = app.state.restaurant_data
+    simplified_list = [
+        {
+            "id": restaurant.get("id"),
+            "name": restaurant.get("name"),
+            "location": restaurant.get("location", "Location not available")
+        }
+        for restaurant in restaurants
+    ]
+    return simplified_list
+
+@app.get("/api/restaurant/{restaurant_id}")
+async def get_restaurant(restaurant_id: str):
+    """Get details of a specific restaurant."""
+    restaurants = app.state.restaurant_data
+    
+    for restaurant in restaurants:
+        if restaurant.get("id") == restaurant_id:
+            return {
+                "id": restaurant.get("id"),
+                "name": restaurant.get("name"),
+                "location": restaurant.get("location", "Location not available"),
+                "menu": restaurant.get("menu", [])
+            }
+    
+    raise HTTPException(status_code=404, detail="Restaurant not found")
+
+# ROUTE 2: Get menu items for a specific restaurant
+@app.get("/api/restaurant/menu/{restaurant_id}")
+async def get_restaurant_menu(restaurant_id: str):
+    """Get menu items for a specific restaurant."""
+    restaurants = app.state.restaurant_data
+    
+    for restaurant in restaurants:
+        if restaurant.get("id") == restaurant_id:
+            menu_items = restaurant.get("menu", [])
+            if not menu_items:
+                return []
+            return menu_items
+    
+    raise HTTPException(status_code=404, detail="Restaurant not found")
+
+
+# ROUTE 3: General chat endpoint
+@app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
     """
     Process a chat request and return a response.
-    
-    Args:
-        request: Chat request containing the user message and optional restaurant_id
-        models: Dependency injection of required models
-    
-    Returns:
-        ChatResponse with the generated response and sources
     """
     retriever = models["retriever"]
     generator = models["generator"]
@@ -165,23 +203,13 @@ async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
         # Get conversation history
         conversation_history = conversation_manager.get_history(session_id)
         
-        # Get restaurant context if provided
-        restaurant_context = None
-        if request.restaurant_id:
-            for restaurant in app.state.restaurant_data:
-                if restaurant.get("id") == request.restaurant_id:
-                    restaurant_context = restaurant
-                    break
-        
         # Detect query type for better retrieval
         query_type = retriever.detect_query_type(request.message)
         logger.debug(f"Detected query type: {query_type}")
         
-        # Retrieve relevant docs with restaurant context filter if available
-        filter_metadata = {"restaurant": restaurant_context["name"]} if restaurant_context else None
+        # Retrieve relevant docs
         retrieved_docs = retriever.retrieve(
-            request.message, 
-            filter_metadata=filter_metadata,
+            request.message,
             conversation_history=conversation_history
         )
         
@@ -219,29 +247,110 @@ async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
             query_type=query_type
         )
         
-    except RetrieverError as e:
-        logger.error(f"Retrieval error: {e}")
-        raise HTTPException(status_code=500, detail=f"Error retrieving information: {str(e)}")
-    except GeneratorError as e:
-        logger.error(f"Generation error: {e}")
-        raise HTTPException(status_code=500, detail=f"Error generating response: {str(e)}")
-    except ZomatoBotError as e:
-        logger.error(f"Application error: {e}")
-        raise HTTPException(status_code=500, detail=f"Application error: {str(e)}")
     except Exception as e:
-        logger.error(f"Unexpected error: {e}")
+        logger.error(f"Error processing chat request: {e}")
         logger.error(traceback.format_exc())
-        raise HTTPException(status_code=500, detail="An unexpected error occurred")
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
-# WebSocket for real-time chat with conversation history
-@app.websocket("/ws/chat")
+# ROUTE 4: Restaurant-specific chat endpoint
+@app.post("/api/chat/{restaurant_id}")
+async def chat_restaurant_endpoint(
+    restaurant_id: str, 
+    request: ChatRequest, 
+    models=Depends(get_models)
+):
+    """Process a chat request for a specific restaurant."""
+    retriever = models["retriever"]
+    generator = models["generator"]
+    conversation_manager = models["conversation_manager"]
+    
+    try:
+        # Find restaurant context
+        restaurant_context = None
+        for restaurant in app.state.restaurant_data:
+            if restaurant.get("id") == restaurant_id:
+                restaurant_context = restaurant
+                break
+        
+        if not restaurant_context:
+            raise HTTPException(status_code=404, detail="Restaurant not found")
+        
+        # Enhance the user query with restaurant context
+        enhanced_query = f"For the restaurant '{restaurant_context['name']}': {request.message}"
+        logger.info(f"Enhanced query with restaurant context: {enhanced_query}")
+        
+        # Create or use existing session ID
+        session_id = request.session_id or conversation_manager.create_session()
+        
+        # Get conversation history
+        conversation_history = conversation_manager.get_history(session_id)
+        
+        # Retrieve relevant docs with restaurant filter
+        filter_metadata = {"restaurant": restaurant_context["name"]}
+        retrieved_docs = retriever.retrieve(
+            enhanced_query,  # Use enhanced query
+            filter_metadata=filter_metadata,
+            conversation_history=conversation_history
+        )
+        
+        # Add restaurant context to the retrieved docs to ensure the generator has the information
+        if not retrieved_docs or len(retrieved_docs) == 0:
+            # Create restaurant info document if no relevant docs found
+            menu_info = "\n".join([f"- {item.get('name', 'Unnamed item')}: {item.get('description', 'No description')} ({item.get('food_type', 'Unknown type')})" 
+                         for item in restaurant_context.get('menu', []) if item.get('name')])
+            
+            restaurant_doc = {
+                "content": f"Restaurant: {restaurant_context['name']}\nLocation: {restaurant_context['location']}\nMenu items:\n{menu_info}",
+                "metadata": {"restaurant": restaurant_context["name"], "type": "info"},
+                "score": 1.0
+            }
+            retrieved_docs = [restaurant_doc]
+        
+        # Generate response with explicit context
+        response = generator.generate(
+            query=enhanced_query,
+            retrieved_docs=retrieved_docs,
+            session_id=session_id
+        )
+        
+        # Format sources
+        sources = [
+            {
+                "content": doc["content"][:100] + "..." if len(doc["content"]) > 100 else doc["content"],
+                "restaurant": doc["metadata"].get("restaurant", "Unknown"),
+                "score": float(doc.get("score", 0))
+            }
+            for doc in retrieved_docs
+        ]
+        
+        # Add turn to conversation history
+        conversation_manager.add_turn(
+            session_id=session_id,
+            query=request.message,
+            response=response,
+            metadata={"restaurant_id": restaurant_id}
+        )
+        
+        return ChatResponse(
+            response=response,
+            sources=sources,
+            session_id=session_id
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in restaurant-specific chat: {e}")
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+
+# ROUTE 5: WebSocket for real-time chat
+@app.websocket("/api/ws/chat")
 async def websocket_endpoint(websocket: WebSocket):
     """
     WebSocket endpoint for real-time chat.
-    
-    Args:
-        websocket: WebSocket connection
     """
     await websocket.accept()
     
@@ -273,7 +382,6 @@ async def websocket_endpoint(websocket: WebSocket):
                 # Parse the message
                 message_data = json.loads(data)
                 user_message = message_data.get("message", "")
-                restaurant_id = message_data.get("restaurant_id")
                 client_session_id = message_data.get("session_id")
                 
                 # Use client session ID if provided
@@ -284,27 +392,17 @@ async def websocket_endpoint(websocket: WebSocket):
                     await websocket.send_text(json.dumps({"error": "No message provided"}))
                     continue
                 
-                logger.info(f"WebSocket message received: '{user_message[:50]}...' if len(user_message) > 50 else user_message")
+                logger.info(f"WebSocket message received: '{user_message[:50]}...'" if len(user_message) > 50 else user_message)
                 
                 # Get conversation history
                 conversation_history = app.state.conversation_manager.get_history(session_id)
                 
-                # Get restaurant context if provided
-                restaurant_context = None
-                if restaurant_id:
-                    for restaurant in app.state.restaurant_data:
-                        if restaurant.get("id") == restaurant_id:
-                            restaurant_context = restaurant
-                            break
-                
                 # Detect query type
                 query_type = app.state.retriever.detect_query_type(user_message)
                 
-                # Process the message with context filter if available
-                filter_metadata = {"restaurant": restaurant_context["name"]} if restaurant_context else None
+                # Process the message
                 retrieved_docs = app.state.retriever.retrieve(
                     user_message, 
-                    filter_metadata=filter_metadata,
                     conversation_history=conversation_history
                 )
                 
@@ -338,8 +436,7 @@ async def websocket_endpoint(websocket: WebSocket):
                     "response": response,
                     "sources": sources,
                     "session_id": session_id,
-                    "query_type": query_type,
-                    "restaurant_context": restaurant_context["name"] if restaurant_context else None
+                    "query_type": query_type
                 }))
                 
             except json.JSONDecodeError:
@@ -357,51 +454,135 @@ async def websocket_endpoint(websocket: WebSocket):
         except:
             pass
 
-@app.post("/api/conversation/reset")
-async def reset_conversation(session_id: str, models=Depends(get_models)):
-    """Reset conversation history for a session"""
-    conversation_manager = models["conversation_manager"]
+
+# ROUTE 6: Restaurant-specific WebSocket chat
+@app.websocket("/api/ws/chat/{restaurant_id}")
+async def websocket_restaurant_endpoint(websocket: WebSocket, restaurant_id: str):
+    """
+    WebSocket endpoint for real-time chat with specific restaurant context.
+    """
+    await websocket.accept()
     
-    result = conversation_manager.clear_history(session_id)
-    if result:
-        return {"status": "success", "message": "Conversation history cleared"}
-    else:
-        return {"status": "not_found", "message": "Session ID not found"}
-
-
-@app.get("/api/conversation/history")
-async def get_conversation_history(session_id: str, limit: Optional[int] = None, models=Depends(get_models)):
-    """Get conversation history for a session"""
-    conversation_manager = models["conversation_manager"]
-    
-    history = conversation_manager.get_history(session_id, limit)
-    return {"history": history, "count": len(history)}
-
-
-# Keep existing endpoints
-@app.get("/api/health")
-async def health_check():
-    """Health check endpoint to verify API is functioning."""
     try:
-        # Basic component checks
-        kb_status = "available" if os.path.exists(str(Config.KB_INDEX_DIR)) else "missing"
-        data_status = "available" if os.path.exists(str(Config.RESTAURANT_DATA_FILE)) else "missing"
+        # Check if models are loaded
+        if not hasattr(app.state, "retriever") or not hasattr(app.state, "generator") or not hasattr(app.state, "conversation_manager"):
+            await websocket.send_text(json.dumps({
+                "error": "Service not fully initialized"
+            }))
+            await websocket.close(code=1011)
+            return
         
-        return {
-            "status": "healthy",
-            "version": "1.0.0",
-            "environment": Config.ENV,
-            "components": {
-                "knowledge_base": kb_status,
-                "restaurant_data": data_status,
-                "api_server": "running"
-            }
-        }
+        # Find restaurant context
+        restaurant_context = None
+        for restaurant in app.state.restaurant_data:
+            if restaurant.get("id") == restaurant_id:
+                restaurant_context = restaurant
+                break
+        
+        if not restaurant_context:
+            await websocket.send_text(json.dumps({
+                "error": "Restaurant not found"
+            }))
+            await websocket.close(code=1011)
+            return
+        
+        logger.info(f"Restaurant-specific WebSocket connection established for restaurant ID {restaurant_id}")
+        
+        # Create a session for this connection
+        session_id = app.state.conversation_manager.create_session()
+        
+        # Send session ID and restaurant info to client
+        await websocket.send_text(json.dumps({
+            "session_id": session_id,
+            "restaurant": restaurant_context["name"],
+            "message": "Connection established"
+        }))
+        
+        while True:
+            # Receive message from client
+            data = await websocket.receive_text()
+            
+            try:
+                # Parse the message
+                message_data = json.loads(data)
+                user_message = message_data.get("message", "")
+                client_session_id = message_data.get("session_id")
+                
+                # Use client session ID if provided
+                if client_session_id:
+                    session_id = client_session_id
+                
+                if not user_message.strip():
+                    await websocket.send_text(json.dumps({"error": "No message provided"}))
+                    continue
+                
+                logger.info(f"Restaurant WebSocket message received: '{user_message[:50]}...'" if len(user_message) > 50 else user_message)
+                
+                # Get conversation history
+                conversation_history = app.state.conversation_manager.get_history(session_id)
+                
+                # Detect query type
+                query_type = app.state.retriever.detect_query_type(user_message)
+                
+                # Process the message with restaurant filter
+                filter_metadata = {"restaurant": restaurant_context["name"]}
+                retrieved_docs = app.state.retriever.retrieve(
+                    user_message, 
+                    filter_metadata=filter_metadata,
+                    conversation_history=conversation_history
+                )
+                
+                response = app.state.generator.generate(
+                    query=user_message, 
+                    retrieved_docs=retrieved_docs,
+                    session_id=session_id
+                )
+                
+                # Add turn to conversation history
+                app.state.conversation_manager.add_turn(
+                    session_id=session_id,
+                    query=user_message,
+                    response=response,
+                    metadata={"query_type": query_type, "restaurant_id": restaurant_id}
+                )
+                
+                # Format source information
+                sources = [
+                    {
+                        "content": doc["content"][:100] + "..." if len(doc["content"]) > 100 else doc["content"],
+                        "restaurant": doc["metadata"].get("restaurant", "Unknown"),
+                        "score": float(doc.get("score", 0)),
+                        "url": doc["metadata"].get("url", None)
+                    }
+                    for doc in retrieved_docs
+                ]
+                
+                # Send response
+                await websocket.send_text(json.dumps({
+                    "response": response,
+                    "sources": sources,
+                    "session_id": session_id,
+                    "query_type": query_type,
+                    "restaurant": restaurant_context["name"]
+                }))
+                
+            except json.JSONDecodeError:
+                await websocket.send_text(json.dumps({"error": "Invalid JSON format"}))
+            except Exception as e:
+                logger.error(f"Error processing restaurant WebSocket message: {e}")
+                await websocket.send_text(json.dumps({"error": f"Error: {str(e)}"}))
+            
     except Exception as e:
-        logger.error(f"Health check failed: {e}")
-        raise HTTPException(status_code=500, detail="Internal server error during health check")
+        logger.error(f"Restaurant WebSocket error: {e}")
+    finally:
+        try:
+            logger.info("Closing restaurant WebSocket connection")
+            await websocket.close()
+        except:
+            pass
 
 
+# Exception handlers
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request: Request, exc: HTTPException):
     """Custom exception handler for HTTP exceptions."""
@@ -421,112 +602,3 @@ async def general_exception_handler(request: Request, exc: Exception):
         status_code=500,
         content={"error": "An unexpected error occurred"}
     )
-
-# Keep existing restaurant endpoints
-@app.get("/api/restaurants")
-async def get_restaurants(
-    cuisine: Optional[str] = None,
-    location: Optional[str] = None,
-    min_rating: Optional[float] = None,
-    sort_by: Optional[str] = None
-):
-    """Get filtered restaurant information."""
-    restaurants = app.state.restaurant_data
-    
-    # Apply filters
-    if cuisine:
-        restaurants = [r for r in restaurants if cuisine.lower() in r.get("cuisine", "").lower()]
-    if location:
-        restaurants = [r for r in restaurants if location.lower() in r.get("location", "").lower()]
-    if min_rating is not None:
-        restaurants = [r for r in restaurants if r.get("rating", 0) >= min_rating]
-    
-    # Apply sorting
-    if sort_by:
-        if sort_by == "rating":
-            restaurants = sorted(restaurants, key=lambda r: r.get("rating", 0), reverse=True)
-        elif sort_by == "name":
-            restaurants = sorted(restaurants, key=lambda r: r.get("name", ""))
-        elif sort_by == "popularity":
-            restaurants = sorted(restaurants, key=lambda r: r.get("popularity", 0), reverse=True)
-    
-    return restaurants
-
-@app.get("/api/restaurants/{restaurant_id}")
-async def get_restaurant_by_id(restaurant_id: str):
-    """Get detailed information about a specific restaurant."""
-    restaurants = app.state.restaurant_data
-    
-    for restaurant in restaurants:
-        if restaurant.get("id") == restaurant_id:
-            return restaurant
-    
-    raise HTTPException(status_code=404, detail="Restaurant not found")
-
-@app.get("/api/cuisines")
-async def get_cuisines():
-    """Get list of all available cuisines."""
-    restaurants = app.state.restaurant_data
-    cuisines = set()
-    
-    for restaurant in restaurants:
-        if "cuisine" in restaurant:
-            for cuisine in restaurant["cuisine"].split(","):
-                cuisines.add(cuisine.strip())
-    
-    return sorted(list(cuisines))
-
-@app.get("/api/locations")
-async def get_locations():
-    """Get list of all available restaurant locations."""
-    restaurants = app.state.restaurant_data
-    locations = set()
-    
-    for restaurant in restaurants:
-        if "location" in restaurant:
-            locations.add(restaurant["location"].strip())
-    
-    return sorted(list(locations))
-
-@app.get("/api/restaurant")
-async def get_all_restaurants():
-    """Get a simplified list of all restaurants with just ID and name."""
-    restaurants = app.state.restaurant_data
-    simplified_list = [
-        {
-            "id": restaurant.get("id"),
-            "name": restaurant.get("name")
-        }
-        for restaurant in restaurants
-    ]
-    return simplified_list
-
-@app.get("/api/restaurant/menu/{restaurant_id}")
-async def get_restaurant_menu(restaurant_id: str):
-    """Get menu items for a specific restaurant."""
-    restaurants = app.state.restaurant_data
-    
-    for restaurant in restaurants:
-        if restaurant.get("id") == restaurant_id:
-            # Check if the restaurant has menu items
-            menu_items = restaurant.get("menu", [])
-            if not menu_items:
-                # If no dedicated "menu" field, create a basic menu structure
-                # from other available data
-                menu_items = []
-                
-                # Add popular dishes if available
-                if "popular_dishes" in restaurant:
-                    for dish in restaurant.get("popular_dishes", []):
-                        menu_items.append({
-                            "name": dish.get("name", "Unknown dish"),
-                            "description": dish.get("description", ""),
-                            "price": dish.get("price", "N/A"),
-                            "vegetarian": dish.get("vegetarian", False),
-                            "category": "Popular Dishes"
-                        })
-            
-            return menu_items
-    
-    # If restaurant not found
-    raise HTTPException(status_code=404, detail="Restaurant or menu not found")

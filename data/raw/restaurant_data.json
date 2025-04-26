@@ -1,6 +1,7 @@
 [
     {
-        "name": "Order Behrouz Biryani Royal Biryani Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "f5011c1d-8d90-426a-9348-212e62420d9c",
+        "name": "Behrouz Biryani Royal Biryani Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -431,13 +432,6 @@
                 "food_type": "Vegetarian"
             },
             {
-                "name": "Murgh Seekh Kebab Kathi Roll",
-                "description": "Spiced Murgh Seekh Kebab cradled in a naram rumali roti, enriched with a fusion of green chutney and mint mayo, and crowned with crisp onions. A shahi creation, destined to leave the Shahenshah spellbound!",
-                "price": 299.0,
-                "rating": "3.9",
-                "food_type": "Non-Vegetarian"
-            },
-            {
                 "name": "Chicken Tikka Kathi Roll",
                 "description": "Succulent Chicken Tikka chunks embraced in a naram Rumali Roti, enriched with the fusion of green chutney and mint mayo, and crowned with fresh, crunchy onions. A feast truly fit for the royalty!",
                 "price": 259.0,
@@ -494,13 +488,6 @@
                 "food_type": "Non-Vegetarian"
             },
             {
-                "name": "Murgh Seekh Kebab",
-                "description": "One of the most revered kebab delicacies, this culinary marvel is crafted with minced chicken that is elegantly spiced with royal spices and is served with a refreshing mint dip.",
-                "price": 215.0,
-                "rating": "4.3",
-                "food_type": "Non-Vegetarian"
-            },
-            {
                 "name": "Murgh Malai Kebab (6 Pcs)",
                 "description": "(6 Pcs) Brimming with impeccable flavours this rich kebab delicacy is as delectable as it is charming. Succulent chicken pieces are eloquently spiced with royal spices and then grilled to perfection to lend it the fascinating smoky flavour.",
                 "price": 399.0,
@@ -520,13 +507,6 @@
                 "price": 489.0,
                 "rating": "4.3",
                 "food_type": "Vegetarian"
-            },
-            {
-                "name": "Gosht Seekh Kebab (Mutton Seekh Kebab)",
-                "description": "Succulent mutton seekh kebabs, delicately spiced and charcoal-grilled to perfection and served with a refreshing mint dip. A timeless delicacy, crafted to elevate your dawat!",
-                "price": 329.0,
-                "rating": "3.8",
-                "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Lazeez Bhuna Murgh Biryani (Dum Chicken Biryani - Serves 1)",
@@ -1262,13 +1242,6 @@
                 "price": 99.0,
                 "rating": "3.9",
                 "food_type": "Vegetarian"
-            },
-            {
-                "name": "Fruit & Nut 700ml (Tub)",
-                "description": "(700ml Tub) A dry fruit lovers paradise! Crunchy cashew nuts, almond and delicious raisins in every bite of creamy scoop. Kcal Serving 128",
-                "price": 236.0,
-                "rating": "3.9",
-                "food_type": "Vegetarian"
             }
         ],
         "special_features": [
@@ -1280,7 +1253,8 @@
         "url": "https://www.eatsure.com/behrouz-biryani/lucknow/gomti-nagar"
     },
     {
-        "name": "Order The Good Bowl Rice Bowl Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "95e31e79-3a49-457f-828f-e338bdcecaf6",
+        "name": "The Good Bowl Rice Bowl Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -2357,7 +2331,8 @@
         "url": "https://www.eatsure.com/the-good-bowl/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Biryani Blues Biryani & Kebab Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "28975899-684a-4902-9931-11cc3e3c15fa",
+        "name": "Biryani Blues Biryani & Kebab Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -2768,7 +2743,8 @@
         "url": "https://www.eatsure.com/biryani-blues/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Ovenstory Pizza Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "ccb4a395-6cc5-4893-9178-90d9c8aebf3c",
+        "name": "Ovenstory Pizza Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -4509,7 +4485,8 @@
         "url": "https://www.eatsure.com/ovenstory/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Honest bowl Rice Bowls Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "ce11ac2b-6bf4-42b1-b844-2d975d2e9ed2",
+        "name": "Honest bowl Rice Bowls Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -4906,7 +4883,8 @@
         "url": "https://www.eatsure.com/honest-bowl/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Lunchbox - Meals & Thalis Homely Meals Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "eb9154fc-5090-4ef3-a7e1-9aaad3fdba70",
+        "name": "Lunchbox - Meals & Thalis Homely Meals Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -5600,13 +5578,6 @@
                 "description": "Succulent chicken pieces slow cooked in a creamy and flavour-rich Mughlai gravy. Served with soft Parathas, creamy Dal Makhani Flavourful Rice and Gulab Jamun.",
                 "price": 335.0,
                 "rating": "4.3",
-                "food_type": "Non-Vegetarian"
-            },
-            {
-                "name": "Chicken Biryani Lunchbox",
-                "description": "A delectable combination of tender marinated chicken pieces and authentic spices layered with long-grained basmati rice. Every spoonful is a burst of flavours and is served with two pieces of Chicken Seekh Kebab, Raita, refreshing Mint chutney and Gulab Jamun.",
-                "price": 395.0,
-                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -6514,40 +6485,8 @@
         "url": "https://www.eatsure.com/lunchbox/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Slow Churn Ice Cream Online in Gomti Nagar, Lucknow from EatSure",
-        "location": "Location information not available",
-        "menu": [
-            {
-                "name": "Slow Churn Jamun Icecream 500ml (Tub)",
-                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
-                "price": 318.0,
-                "rating": "3.9",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Slow Churn Mulberry Icecream 500ml (Tub)",
-                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
-                "price": 318.0,
-                "rating": "4.7",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Magnum Almond Ice Cream 80ml",
-                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
-                "price": 84.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            }
-        ],
-        "special_features": [
-            "Traditional dining experience"
-        ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
-        "url": "https://www.eatsure.com/slow-churn-ice-cream/lucknow/gomti-nagar"
-    },
-    {
-        "name": "Order Kwality Walls Dessert and Ice Cream Frozen Desserts and Ice Cream Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "065e4369-9b47-4cb1-ab47-8b22ca1ec9dd",
+        "name": "Slow Churn Ice Cream Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -6563,10 +6502,185 @@
         ],
         "operating_hours": "",
         "contact_info": "Contact information not available",
+        "url": "https://www.eatsure.com/slow-churn-ice-cream/lucknow/gomti-nagar"
+    },
+    {
+        "id": "9a3bf0c9-ce9c-44ed-94ee-76ccb785e07d",
+        "name": "Kwality Walls Dessert and Ice Cream Frozen Desserts and Ice Cream Online in Gomti Nagar, Lucknow",
+        "location": "Location information not available",
+        "menu": [
+            {
+                "name": "Magnum Almond Ice Cream 80ml",
+                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
+                "price": 84.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Feast Cadbury Crackle 70ml",
+                "description": "Experience the delight of Cadbury Crackle chocolate in a Kwality Walls Feast. Every bite has the deliciousness of Cadbury crackle Chocolate with signature hard chocolate. Taste the layers of Happiness",
+                "price": 51.0,
+                "rating": "4.2",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Double Chocolate (Pack of 2)",
+                "description": "Ayummiliciousduoofmilkanddarkchocolatetoppedwithchocolatesauce,chocochipsinacrunchywafflecone.",
+                "price": 68.0,
+                "rating": "4.5",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Black Forest Feast 70ml x 3pcs",
+                "description": "Black Forest cake meets Feast Cake pieces through layers of Feast with a solid chocolate surprise at the end. KcalServing 249",
+                "price": 114.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Magnum Almond Ice Cream 80ml",
+                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
+                "price": 84.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Magnum Classic",
+                "description": "",
+                "price": 68.0,
+                "rating": "3.7",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "MAGNUM MINI Multipack Almond & Truffle",
+                "description": "",
+                "price": 240.0,
+                "rating": null,
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Double Chocolate (Pack of 2)",
+                "description": "Ayummiliciousduoofmilkanddarkchocolatetoppedwithchocolatesauce,chocochipsinacrunchywafflecone.",
+                "price": 68.0,
+                "rating": "4.5",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Oreo (Pack of 2)",
+                "description": "(110ml) Oreo cookie chunks in creamy vanilla, delicious chocolate disc and crunchy waffle cone. An all time favourite for cone lovers! Kcal Serving 246",
+                "price": 119.0,
+                "rating": "3.6",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Oreo 110ml",
+                "description": "Oreocookiechunksincreamyvanilla,deliciouschocolatediscandcrunchywafflecone.",
+                "price": 59.0,
+                "rating": "4.2",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Sandwich Chocolate and Vanilla(Single)",
+                "description": "LookingforasweetsnackAheartydelicioussandwichfilledcreamyvanillaandyummychocolatebetweentwocrunchybiscuits.",
+                "price": 30.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Choco Vanilla (Single)",
+                "description": "Ayummiliciousduoofrichandcreamyvanilla",
+                "price": 30.0,
+                "rating": "4.3",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Double Chocolate 105ml",
+                "description": "(105ml) A yummilicious duo of milk and dark chocolate topped with chocolate sauce, chocochips in a crunchy waffle cone. Kcal Serving 184",
+                "price": 34.0,
+                "rating": "4.3",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Black Forest Feast(Single)",
+                "description": "BlackForestcakemeetsFeast",
+                "price": 38.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Feast Cadbury Crackle 70ml",
+                "description": "Experience the delight of Cadbury Crackle chocolate in a Kwality Walls Feast. Every bite has the deliciousness of Cadbury crackle Chocolate with signature hard chocolate. Taste the layers of Happiness",
+                "price": 51.0,
+                "rating": "4.2",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Slow Churn Jamun Icecream 500ml (Tub)",
+                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
+                "price": 318.0,
+                "rating": "3.9",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Slow Churn Mulberry Icecream 500ml (Tub)",
+                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
+                "price": 318.0,
+                "rating": "4.7",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Dry Fruit Delight Cup 100ml",
+                "description": "(100ml Cup) A Dry Fruit Lover's Paradise! Crunchy Cashew Nuts, Almonds and Delicious Raisins In Every Bite Of Creamy Bite. Kcal Serving: 126",
+                "price": 68.0,
+                "rating": null,
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Dairy Factory Butterscotch",
+                "description": "",
+                "price": 119.0,
+                "rating": null,
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Dairy Factory Vanilla",
+                "description": "",
+                "price": 102.0,
+                "rating": null,
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Sandwich Chocolate and Vanilla (90ml x 2)",
+                "description": "Looking for a sweet snack A hearty delicious sandwich filled creamy vanilla and yummy chocolate between two crunchy biscuits. Kcal Serving: 336",
+                "price": 59.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Cornetto Choco Vanilla x 4",
+                "description": "(105ml) A yummilicious duo of rich and creamy vanilla topped with chocolate sauce and chocochips in a crunchy waffle cone. Kcal Serving: 708",
+                "price": 119.0,
+                "rating": "4.5",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Black Forest Feast 70ml x 3pcs",
+                "description": "Black Forest cake meets Feast Cake pieces through layers of Feast with a solid chocolate surprise at the end. KcalServing 249",
+                "price": 114.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            }
+        ],
+        "special_features": [
+            "Gluten-free options available"
+        ],
+        "operating_hours": "",
+        "contact_info": "Contact information not available",
         "url": "https://www.eatsure.com/kwality-walls-frozen-dessert-and-ice-creme-shop-ae/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Thalaiva Biryani Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "ac37cdb3-a2f8-41ea-ae1c-51b804840a73",
+        "name": "Thalaiva Biryani Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
@@ -6841,13 +6955,6 @@
                 "price": 99.0,
                 "rating": "4.1",
                 "food_type": "Vegetarian"
-            },
-            {
-                "name": "Mutton Seekh Kebab",
-                "description": "Tender and perfectly spiced mutton kebabs, expertly grilled over charcoal for a smoky, juicy bite, served with a side of mint dip.",
-                "price": 299.0,
-                "rating": "3.9",
-                "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Zareen Murgh Shorba (Chicken Soup)",
@@ -7125,7 +7232,8 @@
         "url": "https://www.eatsure.com/thalaiva-biryani/lucknow/gomti-nagar"
     },
     {
-        "name": "Order Firangi Bake Pasta & Lasagnas Online in Gomti Nagar, Lucknow from EatSure",
+        "id": "d7a3414b-e8ad-41ec-ae8b-90c03cdbe6f5",
+        "name": "Firangi Bake Pasta & Lasagnas Online in Gomti Nagar, Lucknow",
         "location": "Location information not available",
         "menu": [
             {
