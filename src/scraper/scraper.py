@@ -63,19 +63,27 @@ class RestaurantScraper:
         ]
         
         # Try each selector until we find something
+        raw_name = None
         for selector in name_selectors:
             if selector:
                 # If it's an img tag, use alt attribute
                 if selector.name == 'img' and selector.get('alt'):
-                    return selector.get('alt').strip()
+                    raw_name = selector.get('alt').strip()
+                    break
                 # Otherwise use text content
                 elif hasattr(selector, 'text') and selector.text.strip():
-                    return selector.text.strip()
+                    raw_name = selector.text.strip()
+                    break
         
-        # If all else fails, extract from the URL or use a default name
-        domain = url.split('//')[-1].split('/')[0]
-        parts = re.sub(r'www\.|\.com|\.co\.in|\.net', '', domain).split('.')
-        return ' '.join(word.capitalize() for word in parts if word) or "Restaurant"
+        # If no name was found in selectors, fall back to URL extraction
+        if not raw_name:
+            domain = url.split('//')[-1].split('/')[0]
+            parts = re.sub(r'www\.|\.com|\.co\.in|\.net', '', domain).split('.')
+            raw_name = ' '.join(word.capitalize() for word in parts if word) or "Restaurant"
+            print(f"Fallback name from URL: {raw_name}")
+        
+        clean_name = raw_name.replace("Order ", "").replace(" from EatSure", "").strip()
+        return clean_name
 
     def get_restaurant_location(self, soup):
         # Try multiple selectors for location

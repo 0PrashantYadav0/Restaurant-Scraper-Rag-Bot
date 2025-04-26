@@ -154,7 +154,7 @@ async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
     generator = models["generator"]
     conversation_manager = models["conversation_manager"]
     
-    logger.info(f"Chat request received: '{request.message[:50]}...' if len(request.message) > 50 else request.message")
+    logger.info(f"Chat request received: '{request.message[:50]}...'" if len(request.message) > 50 else request.message)
     
     try:
         # Create or use existing session ID
