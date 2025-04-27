@@ -42,10 +42,9 @@ class RestaurantScraper:
         
         restaurant_info['id'] = str(uuid.uuid4())
         restaurant_info['name'] = self.get_restaurant_name(soup, url)
-        restaurant_info['location'] = self.get_restaurant_location(soup)
+        restaurant_info['location'] = self.get_restaurant_location(soup, url)
         restaurant_info['menu'] = self.get_menu_items(soup)
         restaurant_info['special_features'] = self.get_special_features(soup)
-        restaurant_info['operating_hours'] = self.get_operating_hours(soup)
         restaurant_info['contact_info'] = self.get_contact_info(soup)
         restaurant_info['url'] = url
         
@@ -85,8 +84,13 @@ class RestaurantScraper:
         clean_name = raw_name.replace("Order ", "").replace(" from EatSure", "").strip()
         return clean_name
 
-    def get_restaurant_location(self, soup):
-        # Try multiple selectors for location
+    def get_restaurant_location(self, soup, url):
+        # Try to extract location from URL first (especially for eatsure.com)
+        location_from_url = self.extract_location_from_url(url)
+        if location_from_url:
+            return location_from_url
+        
+        # If URL extraction failed, fall back to HTML parsing
         location_selectors = [
             soup.find('p', class_='restaurant-location'),
             soup.find('address'),
@@ -100,6 +104,40 @@ class RestaurantScraper:
                 return selector.text.strip()
         
         return "Location information not available"
+
+    def extract_location_from_url(self, url):
+        """Extract location information from URL if available."""
+        # Handle eatsure.com URLs specifically
+        if 'eatsure.com' in url:
+            try:
+                # Parse URL of format: https://www.eatsure.com/restaurant-name/city/area
+                path_parts = url.split('/')
+                if len(path_parts) >= 6:  # Ensure we have enough parts in the URL
+                    city = path_parts[-2].replace('-', ' ').title()
+                    area = path_parts[-1].replace('-', ' ').title()
+                    return f"{area}, {city}"
+                elif len(path_parts) >= 5:  # Only city might be available
+                    city = path_parts[-1].replace('-', ' ').title()
+                    return city
+            except Exception as e:
+                print(f"Error extracting location from URL: {e}")
+        
+        # For other websites, try to extract any location data from URL
+        try:
+            # Look for common location patterns in the URL
+            location_match = re.search(r'/([a-zA-Z-]+)/([a-zA-Z0-9-]+)$', url)
+            if location_match:
+                possible_city = location_match.group(1).replace('-', ' ').title()
+                possible_area = location_match.group(2).replace('-', ' ').title()
+                
+                # Filter out common non-location URL parts
+                non_location_terms = ['menu', 'about', 'contact', 'index', 'html']
+                if possible_city.lower() not in non_location_terms and possible_area.lower() not in non_location_terms:
+                    return f"{possible_area}, {possible_city}"
+        except Exception:
+            pass
+        
+        return None
 
     def get_menu_items(self, soup):
         menu_items = []
@@ -247,51 +285,32 @@ class RestaurantScraper:
             
         return features
 
-    def get_operating_hours(self, soup):
-        # Try multiple selectors
-        hours_selectors = [
-            soup.find('p', class_='operating-hours'),
-            soup.find(['div', 'section', 'p'], class_=lambda c: c and ('hours' in c or 'timing' in c) if c else False),
-            soup.find(string=lambda s: s and re.search(r'(mon|tue|wed|thu|fri|sat|sun).*\d+:\d+', str(s), re.I) if s else False),
-        ]
-        
-        for selector in hours_selectors:
-            if selector:
-                if hasattr(selector, 'text'):
-                    return selector.text.strip()
-                else:
-                    return str(selector).strip()
-        
-        # Look for common patterns in the page text
-        hours_pattern = re.search(r'(open|hours|timing).*?\d{1,2}(:\d{2})?\s*(am|pm|AM|PM)?.*\d{1,2}(:\d{2})?\s*(am|pm|AM|PM)?', soup.get_text())
-        if hours_pattern:
-            return hours_pattern.group(0)
-            
-        return "Hours information not available"
-
     def get_contact_info(self, soup):
-        # Try to find contact information
-        contact_patterns = {
-            'phone': r'(?:Phone|Tel|Call)(?:\s*(?:us|:))?\s*[+]?(?:\d{1,4}[\s-]?)?(?:\d{3}[\s-]?)\d{3}[\s-]?\d{4}',
-            'email': r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}',
-        }
+        # Look for contactUsSection
+        contact_section = soup.find(attrs={"data-qa": "contactUsSection"})
         
-        contact_info = ""
+        if contact_section:
+            # First try to find strong tags that might contain phone numbers
+            strong_elements = contact_section.find_all('strong')
+            for strong in strong_elements:
+                text = strong.get_text().strip()
+                # Check if it looks like a phone number
+                if re.search(r'\d', text):
+                    return text
+            
+            # If no strong tags with numbers, search for any numbers in the contact section
+            contact_text = contact_section.get_text()
+            phone_match = re.search(r'(\+?[\d\s\-\(\)]{10,})', contact_text)
+            if phone_match:
+                return phone_match.group(0).strip()
         
-        # Check for phone numbers
-        phone_match = re.search(contact_patterns['phone'], soup.get_text())
+        # If nothing found in contactUsSection, look for phone numbers in the whole page
+        phone_pattern = r'(\+?[\d\s\-\(\)]{10,})'
+        phone_match = re.search(phone_pattern, soup.get_text())
         if phone_match:
-            contact_info += f"Phone: {phone_match.group(0)} "
-            
-        # Check for email
-        email_match = re.search(contact_patterns['email'], soup.get_text())
-        if email_match:
-            contact_info += f"Email: {email_match.group(0)}"
-            
-        if not contact_info:
-            contact_info = "Contact information not available"
-            
-        return contact_info.strip()
+            return phone_match.group(0).strip()
+        
+        return None  # Return None if no phone number found
 
     def save_data(self, filename='restaurant_data.json'):
         # Ensure the directory exists
