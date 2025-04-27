@@ -59,7 +59,7 @@ class Config:
     TOP_K_RESULTS = int(os.getenv("TOP_K_RESULTS", "10"))
     
     # API Configuration
-    API_HOST = os.getenv("API_HOST", "127.0.0.1")
+    API_HOST = os.getenv("API_HOST", "0.0.0.0")
     API_PORT = int(os.getenv("API_PORT", "8000"))
     CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
     
