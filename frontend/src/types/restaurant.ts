@@ -11,4 +11,7 @@ export interface Restaurant {
   name: string
   location: string
   menu: MenuItem[]
+  contact: string
+  special_features: string[]
+  url: string
 }

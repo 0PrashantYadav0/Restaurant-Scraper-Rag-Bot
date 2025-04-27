@@ -142,7 +142,8 @@ async def get_restaurants():
         {
             "id": restaurant.get("id"),
             "name": restaurant.get("name"),
-            "location": restaurant.get("location", "Location not available")
+            "location": restaurant.get("location", "Location not available"),
+            "contact" : restaurant.get("contact_info", "Contact not available"),
         }
         for restaurant in restaurants
     ]
@@ -160,7 +161,10 @@ async def get_restaurant(restaurant_id: str):
                 "id": restaurant.get("id"),
                 "name": restaurant.get("name"),
                 "location": restaurant.get("location", "Location not available"),
-                "menu": restaurant.get("menu", [])
+                "contact": restaurant.get("contact_info", "Contact not available"),
+                "special_features": restaurant.get("special_features", "Special features not available"),
+                "menu": restaurant.get("menu", []),
+                "url": restaurant.get("url", "URL not available"),
             }
     
     raise HTTPException(status_code=404, detail="Restaurant not found")

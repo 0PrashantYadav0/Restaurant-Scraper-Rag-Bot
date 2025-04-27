@@ -77,11 +77,38 @@ export default function RestaurantPage() {
             <CardTitle>{restaurant.name}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="mb-4">
-              <h3 className="font-medium">Location</h3>
-              <p>{restaurant.location}</p>
+            <div className="flex justify-between">
+              <div className="mb-4">
+                <h3 className="font-medium">Location</h3>
+                <p>{restaurant.location}</p>
+              </div>
+              <div className="mb-4">
+                <h3 className="font-medium">Contact Info</h3>
+                <p>{restaurant.contact}</p>
+              </div>
             </div>
-
+            <div className="mb-4">
+              <h3 className="font-medium">URL</h3>
+              <div className="text-blue-500 hover:underline">
+                <a href={restaurant.url} target="_blank" rel="noopener noreferrer">
+                  {restaurant.url}
+                </a>
+              </div>
+            </div>
+            <div className="mb-4">
+              {restaurant.special_features.length > 0 && (
+                <>
+                  <h3 className="font-medium">Special Features</h3>
+                  <ul className="list-disc pl-5">
+                    {restaurant.special_features.map((feature, index) => (
+                      <li key={index} className="text-sm text-muted-foreground">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
             <h3 className="font-medium mb-2">Menu</h3>
             <ScrollArea className="h-[400px]">
               {menuItems.length > 0 ? (
