@@ -1,4 +1,4 @@
-# Zomato Restaurant RAG Chatbot Architecture
+# Restaurant RAG Chatbot Architecture
 
 ## Overview
 
@@ -65,7 +65,7 @@ The project is organized into several directories and files, each serving a spec
 - **README.md**: Overview and instructions for the project.
 
 ## Architecture Diagram
-![Architecture Diagram](path/to/architecture_diagram.png)
+![Architecture Diagram](assets/architecture.png)
 
 ## Components Description
 

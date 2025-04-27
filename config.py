@@ -5,11 +5,6 @@ from pathlib import Path
 from typing import List, Dict, Any
 import json
 
-from dotenv import load_dotenv
-
-# Load environment variables from .env file if present
-load_dotenv()
-
 class Config:
     """Configuration class for the Zomato RAG Chatbot project."""
     
