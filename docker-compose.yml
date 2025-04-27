@@ -13,8 +13,6 @@ services:
     environment:
       - ENVIRONMENT=production
       - LOG_LEVEL=info
-      # Add any API keys or environment variables your application needs
-      # - OPENAI_API_KEY=${OPENAI_API_KEY}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
@@ -29,7 +27,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-      - "3000:3000" # For frontend development server
+      - "3000:3000"
     volumes:
       - .:/app
     environment:
