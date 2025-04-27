@@ -31,4 +31,4 @@ RUN mkdir -p data/raw data/processed logs
 EXPOSE 8000
 
 # Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD [ "python", "main.py", "--backend" ]
