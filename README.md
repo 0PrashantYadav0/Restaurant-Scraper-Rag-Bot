@@ -2,74 +2,61 @@
 
 ## Overview
 
-This repository is a web scraping and data processing project that collects restaurant data from various sources, builds a knowledge base, and provides a user-friendly interface for querying the data. The project is built using Python, FastAPI, and React.
+This repository contains a web scraping and data processing project designed to collect restaurant data from various sources, construct a knowledge base using Retrieval-Augmented Generation (RAG), and provide a user-friendly interface for querying this data. The project utilizes Python, FastAPI for the backend, and React for the frontend.
 
 ## Features
 
-- Web scraping of restaurant data
-- Knowledge base construction
-- FastAPI backend for serving data
-- React frontend for user interaction
-- Data visualization and analysis
-- Docker support for easy deployment
-- Data processing and storage
-- Logging and error handling
-- Configuration management
-
-## Setup Guide
-
-[SETUP.md](SETUP.md) provides a detailed setup guide for the project, including instructions for installing dependencies, configuring the environment, and running the application.
-
-## Architecture
-
-[ARCHITECTURE.md](ARCHITECTURE.md) provides an overview of the system architecture, including the data flow, components, and interactions between different parts of the application.
+-   **Web Scraping:** Collects data from specified restaurant sources.
+-   **Knowledge Base Construction:** Processes scraped data and builds a vector store for efficient querying using RAG techniques.
+-   **FastAPI Backend:** Serves the processed data and handles RAG-based queries via API endpoints, including WebSocket support for chat.
+-   **React Frontend:** Provides an interactive user interface for asking questions, chatting with the bot (with session management), viewing restaurant details, and browsing menus.
+-   **RAG Implementation:** Allows users to ask natural language questions about restaurants (general or specific), compare prices, check for dietary options (e.g., gluten-free), and more, leveraging the constructed knowledge base.
+-   **Docker Support:** Includes Docker configuration for simplified setup and deployment.
+-   **Data Processing & Storage:** Manages the storage and retrieval of restaurant information and menu items.
+-   **Logging & Error Handling:** Implements basic logging and error management.
+-   **Configuration Management:** Uses configuration files for managing settings.
 
 ## Live Demo and Functionality
 
+### Deployed Application
+
+Access the live application here: **[https://restaurant-scraper-rag-bot.onrender.com/](https://restaurant-scraper-rag-bot.onrender.com/)**
+
 ### Demo Video
 
-[Demo Video](https://youtu.be/pDOFJSV_tNQ?si=QwroCY3DM35uH0lv) provides a walkthrough of the application, showcasing its features and functionality. (Please use headphones for better experience.)
+[Demo Video](https://youtu.be/pDOFJSV_tNQ?si=QwroCY3DM35uH0lv) provides a walkthrough of the application, showcasing its features and functionality. (Please use headphones for a better experience.)
 
-### Ask Questions
+### Key Features Showcase
 
-In this section you can ask any questions related to the restaurant data. The chatbot will respond with relevant information based on the knowledge base. You can also compare prices, check weather it is gultan free, and get other information about the restaurant.
+1.  **Ask General Questions:** Query the entire restaurant database. The RAG bot responds with relevant information based on the knowledge base. Compare prices, check dietary options, etc.
+    ![Ask Questions](assets/ask-question.png)
 
-![Ask Questions](assets/ask-question.png)
+2.  **General ChatBot:** Engage in a conversation with the chatbot using WebSockets and session management. The bot maintains context and answers based on the knowledge base.
+    ![ChatBot](assets/chatbot.png)
 
-### ChatBot
+3.  **Ask Specific Restaurant Questions:** Focus queries on a single restaurant.
+    ![Ask Questions to one Restaurant only](assets/ask-question-id.png)
 
-In this section you can chat with the chatbot using websockets and session management. The chatbot will remember the context of the conversation and provide relevant responses based on the knowledge base.
+4.  **Specific Restaurant ChatBot:** Chat specifically about one restaurant, maintaining context via WebSockets.
+    ![ChatBot to one Restaurant only](assets/chatbot-id.png)
 
-![ChatBot](assets/chatbot.png)
+5.  **View Menu:** Browse the menu of a specific restaurant with details and images.
+    ![View menu](assets/view-menu.png)
 
-### Ask Questions to one Restaurant only
+6.  **View Restaurant Details:** Access comprehensive information about a specific restaurant (address, phone, website, etc.).
+    ![View restaurant details](assets/restaurant-info.png)
 
-In this section you can ask questions related to a specific restaurant. The chatbot will respond with relevant information based on the knowledge base. You can also compare prices, check weather it is gultan free, and get other information about the restaurant.
+## Setup Guide
 
-![Ask Questions to one Restaurant only](assets/ask-question-id.png)
+[SETUP.md](SETUP.md) provides a detailed setup guide for running the project locally, including instructions for installing dependencies, configuring the environment, and launching the application.
 
-### ChatBot to one Restaurant only
+## Architecture
 
-In this section you can chat with the chatbot using websockets and session management. The chatbot will remember the context of the conversation and provide relevant responses based on the knowledge base.
-
-![ChatBot to one Restaurant only](assets/chatbot-id.png)
-
-### View menu
-
-You can also view the menu of a specific restaurant to get more information about the dishes and prices. The menu is displayed in a user-friendly format with images and descriptions.
-
-![View menu](assets/view-menu.png)
-
-### View restaurant details
-
-To get more information about a specific restaurant, you can view the details such as address, phone number, and website. The details are displayed in a user-friendly format with images and descriptions.
-
-![View restaurant details](assets/restaurant-info.png)
+[ARCHITECTURE.md](ARCHITECTURE.md) provides an overview of the system architecture, detailing the data flow, components (scraper, backend, frontend, knowledge base), and their interactions.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions or improvements, please feel free to open an issue or submit a pull request. 
-Follow all the guidelines provide by GitHub for contributing to this project.
+Contributions are welcome! Please follow standard GitHub practices: open an issue to discuss changes or submit a pull request with your improvements. Adhere to the project's coding standards and guidelines.
 
 ## License
 
@@ -77,13 +64,14 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-This project was inspired by the need for a comprehensive restaurant data scraping and analysis tool. Special thanks to the open-source community for their contributions and support.
+This project was inspired by the need for a comprehensive tool for restaurant data scraping, analysis, and querying using modern AI techniques. Thanks to the open-source community.
 
 ## Contact
 
-For any inquiries or feedback, please contact the project maintainer at [prashantyadav.site](https://prashantyadav.site).
+For inquiries or feedback, contact the project maintainer via their website: [prashantyadav.site](https://prashantyadav.site).
 
 ## Author
 
-- [Prashant Yadav](https://github.com/0PrashantYadav0)
-- [LinkedIn](https://www.linkedin.com/in/prashantyadav097/)
+-   **Prashant Yadav**
+    -   GitHub: [0PrashantYadav0](https://github.com/0PrashantYadav0)
+    -   LinkedIn: [prashantyadav097](https://www.linkedin.com/in/prashantyadav097/)
