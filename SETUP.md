@@ -101,6 +101,13 @@ You can also run the backend and frontend in production mode by building the fro
 ```tree
 ├── ARCHITECTURE.md           # System design & data flow
 ├── config.py                 # ← your settings
+├── docker-compose.yml        # Docker Compose for local dev
+├── Dockerfile                # Dockerfile for containerization
+├── .github/
+│   └── workflows/            # CI/CD workflows
+├── assets/                   # Static assets
+├── notebooks/                # Jupyter notebooks for data exploration
+│   └── restaurant.ipynb      # Restaurant dataset exploration
 ├── data/
 │   ├── raw/                  # Unprocessed scrape outputs
 │   └── processed/            # Cleaned JSON/CSV for RAG
@@ -132,8 +139,8 @@ You can also run the backend and frontend in production mode by building the fro
 | Scrape new restaurant data  | `uv run main.py --scrape`               |
 | Build or update KB index    | `uv run main.py --build-kb`             |
 | Run backend server          | `uv run main.py --backend`              |
-| Run frontend server         | `cd frontend && npm run dev`             |
-| Run frontend in production  | `uv run main.py --backend`               |
+| Run frontend server         | `cd frontend && npm run dev`            |
+| Run frontend in production  | `uv run main.py --backend`              |
 
 ---
 
@@ -142,10 +149,10 @@ You can also run the backend and frontend in production mode by building the fro
 | Issue                                       | Solution                                                                                       |
 |---------------------------------------------|------------------------------------------------------------------------------------------------|
 | **`uvicorn: command not found`**            | Run as module: `python -m uvicorn main:app --reload`                                           |
-| **`pip` refers to old Python**              | Use versioned pip: `python3.10 -m pip install --upgrade pip` then `python3.10 -m pip install …` |
+| **`pip` refers to old Python**              | Use versioned pip: `python3.10 -m pip install --upgrade pip` then `python3.10 -m pip install …`|
 | **npm command not found / PATH issues**     | Ensure Node.js 18+ is installed and restart your shell                                         |
 | **Frontend build errors**                   | Delete `frontend/node_modules/` then `npm install`                                             |
-| **Permission errors on install**            | Use a virtualenv or add `--user` to pip, or run shell as Administrator/root                     |
+| **Permission errors on install**            | Use a virtualenv or add `--user` to pip, or run shell as Administrator/root                    |
 | **CORS/API not reachable**                  | Enable CORS in FastAPI (`from fastapi.middleware.cors import CORSMiddleware`), check ports     |
 
 ---
