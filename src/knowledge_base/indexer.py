@@ -48,3 +48,4 @@ class KnowledgeBaseIndexer:
             index_data = json.load(f)
             self.index = index_data.get("index", {})
             self.name_to_id = index_data.get("name_to_id", {})
+            

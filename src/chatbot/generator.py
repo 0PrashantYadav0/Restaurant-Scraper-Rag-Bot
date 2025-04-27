@@ -1,6 +1,4 @@
-from typing import List, Dict, Any, Optional
-import json
-import os
+from typing import List, Dict
 import re
 import google.generativeai as genai
 
@@ -269,3 +267,4 @@ RESPONSE:"""
         """Clear conversation history for a specific session"""
         if session_id in self.conversation_history:
             del self.conversation_history[session_id]
+            

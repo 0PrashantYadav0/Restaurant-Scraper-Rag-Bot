@@ -1,4 +1,3 @@
-import os
 import json
 from typing import List, Dict, Optional, Any
 from fastapi import FastAPI, WebSocket, HTTPException, Request, Depends
@@ -12,7 +11,6 @@ from contextlib import asynccontextmanager
 
 from config import Config
 from src.utils.logger import setup_logger
-from src.utils.exceptions import ZomatoBotError, RetrieverError, GeneratorError
 from src.chatbot.retriever import Retriever
 from src.chatbot.generator import GoogleAIGenerator
 from src.chatbot.conversation import ConversationManager
@@ -135,7 +133,7 @@ async def get_models():
     }
 
 
-# ROUTE 1: Get list of restaurants with name and location
+# Get list of restaurants with name and location
 @app.get("/api/restaurants")
 async def get_restaurants():
     """Get a list of restaurants with their names and locations."""
@@ -150,6 +148,7 @@ async def get_restaurants():
     ]
     return simplified_list
 
+# Get details of a specific restaurant
 @app.get("/api/restaurant/{restaurant_id}")
 async def get_restaurant(restaurant_id: str):
     """Get details of a specific restaurant."""
@@ -166,7 +165,7 @@ async def get_restaurant(restaurant_id: str):
     
     raise HTTPException(status_code=404, detail="Restaurant not found")
 
-# ROUTE 2: Get menu items for a specific restaurant
+# Get menu items for a specific restaurant
 @app.get("/api/restaurant/menu/{restaurant_id}")
 async def get_restaurant_menu(restaurant_id: str):
     """Get menu items for a specific restaurant."""
@@ -182,7 +181,7 @@ async def get_restaurant_menu(restaurant_id: str):
     raise HTTPException(status_code=404, detail="Restaurant not found")
 
 
-# ROUTE 3: General chat endpoint
+# General chat endpoint
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
     """
@@ -253,7 +252,7 @@ async def chat_endpoint(request: ChatRequest, models=Depends(get_models)):
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
-# ROUTE 4: Restaurant-specific chat endpoint
+# Restaurant-specific chat endpoint
 @app.post("/api/chat/{restaurant_id}")
 async def chat_restaurant_endpoint(
     restaurant_id: str, 
@@ -346,7 +345,7 @@ async def chat_restaurant_endpoint(
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
-# ROUTE 5: WebSocket for real-time chat
+# WebSocket for real-time chat
 @app.websocket("/api/ws/chat")
 async def websocket_endpoint(websocket: WebSocket):
     """
@@ -455,7 +454,7 @@ async def websocket_endpoint(websocket: WebSocket):
             pass
 
 
-# ROUTE 6: Restaurant-specific WebSocket chat
+# Restaurant-specific WebSocket chat
 @app.websocket("/api/ws/chat/{restaurant_id}")
 async def websocket_restaurant_endpoint(websocket: WebSocket, restaurant_id: str):
     """
@@ -592,7 +591,7 @@ async def http_exception_handler(request: Request, exc: HTTPException):
         content={"error": exc.detail}
     )
 
-
+# Global exception handler for unhandled exceptions
 @app.exception_handler(Exception)
 async def general_exception_handler(request: Request, exc: Exception):
     """Global exception handler for unhandled exceptions."""

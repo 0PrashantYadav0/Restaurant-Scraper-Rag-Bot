@@ -1,5 +1,4 @@
 import json
-import os
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Union
 
@@ -414,3 +413,4 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"Knowledge base creation failed: {e}")
         raise
+    

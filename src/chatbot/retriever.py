@@ -1,7 +1,5 @@
 import re
-import numpy as np
-from typing import List, Dict, Any, Optional, Tuple
-from pathlib import Path
+from typing import List, Dict, Any, Optional
 
 from src.utils.logger import setup_logger
 from src.utils.exceptions import RetrieverError
@@ -226,3 +224,4 @@ class Retriever:
         except Exception as e:
             logger.error(f"Error retrieving documents: {e}")
             raise RetrieverError(f"Failed to retrieve relevant documents: {str(e)}")
+        

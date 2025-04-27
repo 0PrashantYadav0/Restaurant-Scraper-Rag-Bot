@@ -88,3 +88,4 @@ class ConversationManager:
             del self.conversations[session_id]
             return True
         return False
+    

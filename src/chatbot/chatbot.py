@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 import uuid
 from src.chatbot.retriever import RestaurantRetriever
 from src.chatbot.generator import RAGGenerator
@@ -96,3 +96,4 @@ class RestaurantRAGChatbot:
         """
         self.conversation_manager.clear_conversation(session_id)
         return {"status": "success", "message": "Conversation reset successfully"}
+    
