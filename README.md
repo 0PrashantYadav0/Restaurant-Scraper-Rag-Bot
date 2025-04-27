@@ -26,6 +26,10 @@ This repository is a web scraping and data processing project that collects rest
 
 ## Live Demo and Functionality
 
+### Demo Video
+
+[Demo Video](https://youtu.be/pDOFJSV_tNQ?si=QwroCY3DM35uH0lv) provides a walkthrough of the application, showcasing its features and functionality. (Please use headphones for better experience.)
+
 ### Ask Questions
 
 In this section you can ask any questions related to the restaurant data. The chatbot will respond with relevant information based on the knowledge base. You can also compare prices, check weather it is gultan free, and get other information about the restaurant.
