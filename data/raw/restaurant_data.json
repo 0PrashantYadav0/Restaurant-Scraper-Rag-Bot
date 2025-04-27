@@ -1,8 +1,8 @@
 [
     {
-        "id": "f5011c1d-8d90-426a-9348-212e62420d9c",
+        "id": "591b5de0-bc69-4fe0-b287-9517a1b8b048",
         "name": "Behrouz Biryani Royal Biryani Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Lazeez Bhuna Murgh Biryani (Dum Chicken Biryani - Serves 1)",
@@ -120,7 +120,7 @@
                 "name": "Chicken Tikka Kathi Roll",
                 "description": "Succulent Chicken Tikka chunks embraced in a naram Rumali Roti, enriched with the fusion of green chutney and mint mayo, and crowned with fresh, crunchy onions. A feast truly fit for the royalty!",
                 "price": null,
-                "rating": "3.9",
+                "rating": "4.1",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -134,7 +134,7 @@
                 "name": "BOGO 2 Biryanis (Non-Veg) (Serves 2)",
                 "description": "Create your dream feast with our customizable Non-Veg Biryani combo, where you can mix and match any two delectable biryanis of your choice, ensuring a personalized delight!!",
                 "price": null,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -358,7 +358,7 @@
                 "name": "Dum Gosht Biryani Dawat (serves 8)",
                 "description": "(Served with mint raita) Succulent boneless gosht, marinated in rich spices, layered with sunhere basmati, and dum-pukht to perfection. A behtareen dawat befitting of royalty like you.",
                 "price": 2199.0,
-                "rating": null,
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -435,7 +435,7 @@
                 "name": "Chicken Tikka Kathi Roll",
                 "description": "Succulent Chicken Tikka chunks embraced in a naram Rumali Roti, enriched with the fusion of green chutney and mint mayo, and crowned with fresh, crunchy onions. A feast truly fit for the royalty!",
                 "price": 259.0,
-                "rating": "3.9",
+                "rating": "4.1",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -484,7 +484,7 @@
                 "name": "Gosht-E-Galouti Kebab (Mutton Galauti Kebab)",
                 "description": "A melt-in-mouth culinary delicacy it can take the most enigmatic feasts a notch above. Tenderest mutton is minced to perfection & cooked with delicate spices to offer you a truly exquisite culinary experience.",
                 "price": 299.0,
-                "rating": null,
+                "rating": "3.9",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -659,7 +659,7 @@
                 "name": "Zaikedaar Paneer Biryani (Paneer Dum Biryani - Serves 2)",
                 "description": "(With 2 Gulab Jamuns & Mint Raita, Served in a Royal Metal Handi ) Feast like a king for your daawat! Relish fresh, tender paneer, marinated with exquisite royal spices & dumpukht with aromatic basmati.",
                 "price": 799.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -680,14 +680,14 @@
                 "name": "Murgh Tikka Biryani (Chicken Tikka Dum Biryani - Serves 2)",
                 "description": "(Boneless, with 2 Gulab Jamuns & Mint Raita, Served in a Royal Metal Handi) A symphony of extravagant flavours, tender chicken infused with freshly ground Behrouz masala, charcoal-grilled, and layered with aromatic basmati. Dum-cooked to perfection, this biryani is a testament to royal culinary artistry.",
                 "price": 929.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Paneer Subz Biryani (Paneer Dum and Veg Biryani - Serves 2)",
                 "description": "(With 2 Gulab Jamuns & Mint Raita, Served in a Royal Metal Handi) In this balanced masterpiece fir for royalty, diced fresh vegetables infused with succulent pieces of spiced paneer are layered on a bed of aromatic rice. Crafting a royal indulgence that is simply unforgettable!",
                 "price": 769.0,
-                "rating": "4.4",
+                "rating": "4.5",
                 "food_type": "Vegetarian"
             },
             {
@@ -729,7 +729,7 @@
                 "name": "Zaikedaar Paneer (Paneer Dum Biryani - Serves 4).",
                 "description": "(Served with 4 Gulab Jamuns & Mint Raita) In this extravagant dish, soft & crumbly, fresh paneer is marinated with exquisite royal spices & layered with basmati to create a dish that is as delectable as it is extravagant.",
                 "price": 1305.0,
-                "rating": "4.4",
+                "rating": "4.5",
                 "food_type": "Vegetarian"
             },
             {
@@ -806,7 +806,7 @@
                 "name": "Murgh Afghani Tikka Biryani (Creamy Chicken Tikka - Serves 4-5)",
                 "description": "(Boneless, with 4 Gulab Jamuns & Mint Raita, Served in a Royal Metal Handi) Celebrated for its luxurious flavours and velvety texture, tender chicken is marinated in fresh yoghurt and an exquisite blend of rich spices. Layered with fragrant basmati, this biryani promises an enchanting feast fit for Royalty!",
                 "price": 1749.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -820,7 +820,7 @@
                 "name": "Paneer Subz Biryani (Paneer Dum and Veg Biryani - Serves 4-5)",
                 "description": "(With 4 Gulab Jamuns & Mint Raita, Served in a Royal Metal Handi) In this balanced masterpiece fir for royalty, diced fresh vegetables infused with succulent pieces of spiced paneer are layered on a bed of aromatic rice. Crafting a royal indulgence that is simply unforgettable!",
                 "price": 1399.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -890,7 +890,7 @@
                 "name": "Shaandaar Dawat with Haleem (Serves 3)",
                 "description": "Choice of Haleem (300g), Shaan Biryani (Serves 2, with 2 Gulab Jamuns and Raita), Kebabs (6pcs) & Breads. Pesh-e-khidmat hai ek yaadgaar iftar with porridge-textured haleem and narm kulchas, along with a shaandaar dumpukht biryani and lajawab kebabs.",
                 "price": 1369.0,
-                "rating": "3.8",
+                "rating": null,
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -995,7 +995,7 @@
                 "name": "Rumali Roti",
                 "description": "Indulge in the delicate layers of our Rumali Roti, crafted to perfection with tenderness in every bite. Pair this as a fine accompaniment to your choice of royal curries.",
                 "price": 89.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1142,7 +1142,7 @@
                 "name": "Ayran (Buttermilk)",
                 "description": "A popular drinks from the land of Behrouz, Ayran is a Persian take of buttermilk topped with mint.",
                 "price": 65.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1233,7 +1233,7 @@
                 "name": "Vanilla Ice Cream",
                 "description": "Luxuriously smooth and creamy that melts effortlessly on the tongue, this vanilla ice cream is sure to give you the chills with it's deliciousness. Serving Size - 100ml",
                 "price": 99.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
@@ -1248,14 +1248,13 @@
             "Vegetarian options available",
             "Outdoor seating"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/behrouz-biryani/lucknow/gomti-nagar"
     },
     {
-        "id": "95e31e79-3a49-457f-828f-e338bdcecaf6",
+        "id": "90fc29ce-cfa7-489a-9b9c-c3963946c5fe",
         "name": "The Good Bowl Rice Bowl Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Chicken Tikka Masala Rice Bowl",
@@ -1429,7 +1428,7 @@
                 "name": "Classic Rajma Mini Rice Bowl",
                 "description": "Classic rajma and rice all 350 grams of this Pookie combo is your comfort hero! Calories (Kcals) : 503 Carbs (gms) : 70 Proteins (gms) : 10 Fats (gms) : 21",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1443,7 +1442,7 @@
                 "name": "Roast Vegetables Mini Rice Bowl",
                 "description": "Crunchy roasted veggies meet rice in a 350-gram bowl of pure Pookie goodness. Calories (Kcals) : 495 Carbs (gms) : 75 Proteins (gms) : 10 Fats (gms) : 23",
                 "price": null,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1464,7 +1463,7 @@
                 "name": "Classic Rajma Mini Rice Bowl",
                 "description": "Classic rajma and rice all 350 grams of this Pookie combo is your comfort hero! Calories (Kcals) : 503 Carbs (gms) : 70 Proteins (gms) : 10 Fats (gms) : 21",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1485,7 +1484,7 @@
                 "name": "Roast Vegetables Mini Rice Bowl",
                 "description": "Crunchy roasted veggies meet rice in a 350-gram bowl of pure Pookie goodness. Calories (Kcals) : 495 Carbs (gms) : 75 Proteins (gms) : 10 Fats (gms) : 23",
                 "price": null,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1632,7 +1631,7 @@
                 "name": "Pesto Mac & Cheese with Chicken Sausage Bowl",
                 "description": "Say hello to your new favorite comfort food! Creamy mac & cheese meets the savory goodness of chicken sausage, all bathed in the earthy richness of pesto sauce. A bowl full of indulgence!",
                 "price": 349.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -1835,7 +1834,7 @@
                 "name": "Classic Rajma Mini Rice Bowl",
                 "description": "Classic rajma and rice all 350 grams of this Pookie combo is your comfort hero! Calories (Kcals) : 503 Carbs (gms) : 70 Proteins (gms) : 10 Fats (gms) : 21",
                 "price": 169.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1884,14 +1883,14 @@
                 "name": "Chicken Lababdar Mini Rice Bowl",
                 "description": "Rich, buttery Chicken Lababdar over rice a royal Pookie indulgence in 350 grams! Calories (Kcals) : 676 Carbs (gms) : 76 Proteins (gms) : 31 Fats (gms) : 27",
                 "price": 269.0,
-                "rating": "4.5",
+                "rating": "4.6",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Roast Vegetables Mini Rice Bowl",
                 "description": "Crunchy roasted veggies meet rice in a 350-gram bowl of pure Pookie goodness. Calories (Kcals) : 495 Carbs (gms) : 75 Proteins (gms) : 10 Fats (gms) : 23",
                 "price": 169.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -1968,7 +1967,7 @@
                 "name": "Pesto Mac N Cheese Pasta Bowl With Sausages",
                 "description": "Say hello to your new favorite comfort food! Creamy mac & cheese meets the savory goodness of chicken sausage, all bathed in the earthy richness of pesto sauce. A bowl full of indulgence!",
                 "price": 349.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -2066,14 +2065,14 @@
                 "name": "Pizza Puff (Pack of 2)",
                 "description": "Snack-time just got cheesier! Munch on 2 yummy pizza pockets loaded with fresh veggies, diced cheddar mixed with zesty pizza sauce and let the partyy begin!",
                 "price": 89.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Pizza Puff (Pack of 4)",
                 "description": "Snack-time just got cheesier! Munch on yummy pizza pockets loaded with fresh veggies, diced cheddar mixed with zesty pizza sauce and let the partyy begin!",
                 "price": 159.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
@@ -2255,7 +2254,7 @@
                 "name": "Cold Coffee (200 mL)",
                 "description": "Guaranteed to satisfy your craving for caffeine and coolness, this refreshing, ready-to-drink, cold coffee is an all time favourite.",
                 "price": 119.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -2326,14 +2325,13 @@
             "Vegetarian options available",
             "Outdoor seating"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/the-good-bowl/lucknow/gomti-nagar"
     },
     {
-        "id": "28975899-684a-4902-9931-11cc3e3c15fa",
+        "id": "ee37ae19-de81-4de8-bb17-0d889c089c08",
         "name": "Biryani Blues Biryani & Kebab Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Pepper Chicken",
@@ -2738,14 +2736,13 @@
         "special_features": [
             "Traditional dining experience"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/biryani-blues/lucknow/gomti-nagar"
     },
     {
-        "id": "ccb4a395-6cc5-4893-9178-90d9c8aebf3c",
+        "id": "68d940ea-9f16-4d7a-8258-a9ce33f7bd5d",
         "name": "Ovenstory Pizza Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Double Cheese Tandoori Paneer Tikka Medium Pizza",
@@ -2765,7 +2762,7 @@
                 "name": "Double Cheese Garden Fresh Veggie Medium Pizza",
                 "description": "Now with twice the cheesy goodness - Your pizza topped with Jalapenos, Black Olives, Onion, Tomato, American Corns and Cheese",
                 "price": 525.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -2898,7 +2895,7 @@
                 "name": "Double Cheese Margherita Medium Pizza (Serves 2)",
                 "description": "Mozzarella Cheese, Parsley. Enjoy this double loaded cheese pizza with rich, creamy Mozzarella cheese and a hint of Parsley.",
                 "price": 430.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -2961,7 +2958,7 @@
                 "name": "Classic Pepperoni Medium Pizza",
                 "description": "Spicy Chicken Pepperoni, Parsley Sprinkles, Mozzarella Cheese",
                 "price": 499.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -3094,7 +3091,7 @@
                 "name": "Capsicum Pizza",
                 "description": "Pizza topped with crunchy capsicum and gooey mozzarella cheese",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -3276,7 +3273,7 @@
                 "name": "Double Cheese Garden Fresh Veggie Medium Pizza",
                 "description": "Now with twice the cheesy goodness - Your pizza topped with Jalapenos, Black Olives, Onion, Tomato, American Corns and Cheese",
                 "price": 525.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -3388,7 +3385,7 @@
                 "name": "Corn & Cheese Pizza",
                 "description": "American Corn, Mozzarella Cheese, El Classico Cheese",
                 "price": 199.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -3409,21 +3406,21 @@
                 "name": "Tandoori Paneer Tikka Pizza",
                 "description": "Tender Paneer Tikka, Corn, Onion, Mozzarella Cheese, El Classico Cheese.",
                 "price": 239.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Garden Fresh Veggie Pizza",
                 "description": "Jalapenos, Black Olives, Crunchy Bell Peppers, Onion, Mozzarella Cheese.",
                 "price": 249.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Maharaja Veg Pizza",
                 "description": "Paneer Tikka, Jalapenos, Bell Peppers, Olives, Onion, Mozzarella Cheese.",
                 "price": 289.0,
-                "rating": null,
+                "rating": "3.9",
                 "food_type": "Vegetarian"
             },
             {
@@ -3437,7 +3434,7 @@
                 "name": "Smoked Chicken Sausage Pizza",
                 "description": "Smoked Chicken Sausages, Crunchy Capsicum, Onion, Mozzarella Cheese, El Classico Cheese.",
                 "price": 209.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -3451,7 +3448,7 @@
                 "name": "BBQ Chicken Pizza",
                 "description": "BBQ Chicken, Capsicum, Onions, Mozzarella Cheese, El Classico Cheese.",
                 "price": 239.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -3479,7 +3476,7 @@
                 "name": "Dragonfire Margherita Pizza",
                 "description": "Fiery Garlic Schezwan Sauce, Parsley Sprinkles, Oodles of Mozzarella Cheese",
                 "price": 199.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -3500,7 +3497,7 @@
                 "name": "Pesto Paneer Tikka Pizza",
                 "description": "Italian Basil Pesto Sauce, Tender Paneer Chunks, Capsicum, Tomato, Onion, Mozzarella Cheese",
                 "price": 279.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
@@ -3521,21 +3518,21 @@
                 "name": "Falafel Shawarma Pizza",
                 "description": "Crispy falafel mingles with savory shawarma flavors, jalapenos, olives, capsicum, onion, garlic mayo and cheese! creating a delightful fusion that transports you straight to the Middle East.",
                 "price": 299.0,
-                "rating": "4.6",
+                "rating": "4.7",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Signature Korean Paneer Pizza",
                 "description": "Transport yourself to K-Town with this thrilling combination of buldak sauce, spicy paneer chunks, onion, capsicum, mozzarella cheese!",
                 "price": 299.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Paneer Shawarma Pizza",
                 "description": "Paneer Shawarma, jalapenos, olives, capsicum, onions and garlic mayo on a cheesy canvas. A delicious adventure to the streets of Middle East for sure!",
                 "price": 309.0,
-                "rating": "3.6",
+                "rating": "3.7",
                 "food_type": "Vegetarian"
             },
             {
@@ -3549,14 +3546,14 @@
                 "name": "Butter Chicken Pizza",
                 "description": "Chicken Tikka Chunks, Butter Chicken Gravy, Capsicum, Tomato, Onion",
                 "price": 309.0,
-                "rating": "3.6",
+                "rating": "3.8",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Signature Korean Chicken Pizza",
                 "description": "K-Pop your tastebuds with hot buldak sauce, flavourful chicken chunks, onion, capsicum, mozzarella cheese!",
                 "price": 319.0,
-                "rating": "4.2",
+                "rating": "3.9",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -3570,7 +3567,7 @@
                 "name": "Dragonfire Chicken Pizza",
                 "description": "Fiery Schezwan Chicken, Hot Garlic Sauce, Capsicum, Onion, Mozzarella Cheese",
                 "price": 329.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -3836,7 +3833,7 @@
                 "name": "Heart Shaped Choco Lava Cake",
                 "description": "This Heart-shaped Choco Lava Cake is the ultimate treat: warm, decadent, and irresistibly chocolatey.",
                 "price": 119.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -3899,7 +3896,7 @@
                 "name": "Vanilla Ice Cream",
                 "description": "Luxuriously smooth and creamy that melts effortlessly on the tongue, this vanilla ice cream is sure to give you the chills with it's deliciousness. Serving Size - 100ml",
                 "price": 99.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
@@ -4095,7 +4092,7 @@
                 "name": "Corn and Cheese Cheese Burst Pizza (Serves 2)",
                 "description": "American corn, Mozzarella Cheese. Enjoy the juicy kernels of American corn on a soft, super cheesy base!",
                 "price": null,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
@@ -4340,7 +4337,7 @@
                 "name": "Buy One Get One - 1 Veg & 1 Non-Veg Regular Pizzas at 299",
                 "description": "Double the delight with Ovenstory Pizza! Enjoy 1 Veg & 1 Non-Veg Regular Pizzas for just Rs299 with our Buy One Get One offer Perfect for sharing or indulging solo dont miss out on this cheesy deal!",
                 "price": 299.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -4375,7 +4372,7 @@
                 "name": "Personal Non-Veg Paradise Combo",
                 "description": "(Save upto Rs. 144) The perfect combo with a non-veg regular pizza, your favourite side and dessert!",
                 "price": 469.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -4389,14 +4386,14 @@
                 "name": "Non-Veggie Delight Combo",
                 "description": "(Save upto Rs. 110) Chicken lovers assemble! Get this flavour packed combo of non-veg regular pizza with a side and beverage of your choice!",
                 "price": 399.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Capsicum Pizza",
                 "description": "Pizza topped with crunchy capsicum and gooey mozzarella cheese",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -4466,7 +4463,7 @@
                 "name": "Chicken Tikka Overload & Capsicum Pizza",
                 "description": "Classic Tandoori Chicken Tikka, Capsicum, Cheese Sauce. All the chicken binge eaters, here's your treat. Double the juicy chicken tikka chunks and perfect crunch adding capsicums on your cheesy pizza",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -4480,14 +4477,13 @@
         "special_features": [
             "Traditional dining experience"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/ovenstory/lucknow/gomti-nagar"
     },
     {
-        "id": "ce11ac2b-6bf4-42b1-b844-2d975d2e9ed2",
+        "id": "67a5e308-8b35-4b4b-b626-4a98618421df",
         "name": "Honest bowl Rice Bowls Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "1 + 1 classic bowl combo (Veg)",
@@ -4549,7 +4545,7 @@
                 "name": "Corn Masala Gharwala Bowl",
                 "description": "226kCal, Protein - 3g, Carbs - 32g, Fat -8g Sweet corn cooked in homestyle masala with rice.",
                 "price": 199.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -4787,7 +4783,7 @@
                 "name": "Corn Masala Gharwala Bowl (350 Kcal)",
                 "description": "226kCal, Protein - 3g, Carbs - 32g, Fat -8g Sweet corn cooked in homestyle masala with rice.",
                 "price": 199.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -4857,7 +4853,7 @@
                 "name": "Cold Coffee (200 mL)",
                 "description": "Guaranteed to satisfy your craving for caffeine and coolness, this refreshing, ready-to-drink, cold coffee is an all time favourite.",
                 "price": 119.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -4878,14 +4874,13 @@
         "special_features": [
             "Traditional dining experience"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/honest-bowl/lucknow/gomti-nagar"
     },
     {
-        "id": "eb9154fc-5090-4ef3-a7e1-9aaad3fdba70",
+        "id": "548eb399-b8a5-400c-a02c-d687f96faab6",
         "name": "Lunchbox - Meals & Thalis Homely Meals Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Pindi Chole with Kulcha Lunchbox",
@@ -5080,7 +5075,7 @@
                 "name": "Gobi Paratha With Dal Makhani",
                 "description": "Indulge in a hearty combo of soft, spiced Gobi Paratha served alongside creamy Dal Makhani. The rich gravy and stuffed paratha make for a wholesome, satisfying meal.",
                 "price": null,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -5182,11 +5177,11 @@
                 "food_type": "Non-Vegetarian"
             },
             {
-                "name": "Dal Makhani with Chapati Lunchbox",
-                "description": "Authentic Dal Makhni, creamy & rich at its core, will fill you with a feeling of contentment and delight. Served with 4 warm & fresh homestyle Chapatis. Sufficient for 1.",
-                "price": 199.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
+                "name": "Chicken Kheema and Chapati Lunchbox",
+                "description": "A delicious lunchbox contains chicken kheema and whole wheat chapati the perfect meal on the go.",
+                "price": 239.0,
+                "rating": "4.7",
+                "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Rajma & Rumali Roti Lunchbox",
@@ -5248,7 +5243,7 @@
                 "name": "Paneer Lababdar Rumali Roti Lunchbox",
                 "description": "Paneer Lababdars rich, creamy flavors meet the simplicity of Rumali Rotis a combo you will love.",
                 "price": 339.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -5262,28 +5257,28 @@
                 "name": "Chicken Lababdar Rumali Roti Lunchbox",
                 "description": "Succulent Chicken Lababdar served with fresh Rumali Rotis a lunchbox that is hard to resist.",
                 "price": 339.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Chicken Tikka Masala Rumali Roti Lunchbox",
                 "description": "Juicy Chicken Tikka Masala complemented by soft Rumali Rotis a spicy and delicious treat.",
                 "price": 329.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Mushroom Masala with Rumali Roti Lunchbox",
                 "description": "Earthy, flavorful Mushroom Masala served with delicate Rumali Rotis for a vegetarian delight.",
                 "price": 339.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Mughlai Egg Curry with Rumali Roti Lunchbox",
                 "description": "Delicious Mughlai Egg Curry served with soft Rumali Rotis a unique blend of richness and flavor.",
                 "price": 289.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -5339,7 +5334,7 @@
                 "name": "Paneer Tikka Masala Rice LunchBox",
                 "description": "Spice up your meal with our Paneer Tikka Masala gravy served with flavourful rice.",
                 "price": 309.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -5360,7 +5355,7 @@
                 "name": "Palak Chicken Rice Lunchbox",
                 "description": "The popular Palak Chicken, handcrafted and spiced to perfection by our master chefs served with a side of Rice. This delicious combo will keep you wanting more! Sufficient for 1.",
                 "price": 249.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -5374,7 +5369,7 @@
                 "name": "Chicken Tikka Masala Rice LunchBox",
                 "description": "Treat yourself to a delicious chicken tikka gravy served with fresh & steaming hot flavourful Rice.",
                 "price": 309.0,
-                "rating": "4.6",
+                "rating": "4.5",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -5395,7 +5390,7 @@
                 "name": "Gobi Paratha With Dal Makhani",
                 "description": "Indulge in a hearty combo of soft, spiced Gobi Paratha served alongside creamy Dal Makhani. The rich gravy and stuffed paratha make for a wholesome, satisfying meal.",
                 "price": 259.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -5451,7 +5446,7 @@
                 "name": "Double Omelette & Meatballs with Masala Bread",
                 "description": "Elevate your breakfast with our fluffy double Omelette served with delicious Sausages & soft Masala Kulchas!",
                 "price": 169.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -5542,7 +5537,7 @@
                 "name": "Mushroom Masala Jumbo Lunchbox",
                 "description": "Mouthwatering Mushroom Masala accompanied by creamy dal makhani, steaming basmati rice, tender paratha, gulab jamun a delightful combination of flavors and textures",
                 "price": 385.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -5626,7 +5621,7 @@
                 "name": "Paneer Tikka Masala Kulcha Lunchbox",
                 "description": "Add a smoky touch to your lunch! This is Paneer Tikka Masala served with soft Kulchas",
                 "price": 299.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -5731,7 +5726,7 @@
                 "name": "Paneer Tikka Masala Paratha Lunchbox",
                 "description": "Tender paneer cubes grilled, charred perfectly and tossed in a rich and creamy gravy served with hot Parathas",
                 "price": 319.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -6053,7 +6048,7 @@
                 "name": "Dal Makhani Bowl",
                 "description": "Authentic Dal Makhni, creamy & rich at its core, will fill you with a feeling of contentment and delight.",
                 "price": 179.0,
-                "rating": "4.2",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -6081,7 +6076,7 @@
                 "name": "Chicken Kheema Bowl",
                 "description": "Finely minced Chicken Kheema is slow-cooked to perfection with a lot of care and the perfect blend of spices.",
                 "price": 219.0,
-                "rating": "4.4",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -6102,7 +6097,7 @@
                 "name": "Paneer Lababdar Bowl (500 gms)",
                 "description": "Soft and fresh paneer simmered in creamy buttery gravy. Too much deliciousness in one bowl, isnt it.",
                 "price": 529.0,
-                "rating": null,
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -6116,7 +6111,7 @@
                 "name": "Palak Chicken Bowl (500 gms)",
                 "description": "(Serves 2-3) A popular North Indian curry cooked in a spiced, protein-rich palak gravy to compliment your meals.",
                 "price": 405.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -6242,14 +6237,14 @@
                 "name": "Pizza Puff (Pack of 2)",
                 "description": "Snack-time just got cheesier! Munch on 2 yummy pizza pockets loaded with fresh veggies, diced cheddar mixed with zesty pizza sauce and let the partyy begin!",
                 "price": 89.0,
-                "rating": "4.3",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Pizza Puff (Pack of 4)",
                 "description": "Snack-time just got cheesier! Munch on yummy pizza pockets loaded with fresh veggies, diced cheddar mixed with zesty pizza sauce and let the partyy begin!",
                 "price": 159.0,
-                "rating": "4.1",
+                "rating": "4.2",
                 "food_type": "Vegetarian"
             },
             {
@@ -6284,7 +6279,7 @@
                 "name": "Cold Coffee (200 mL)",
                 "description": "Guaranteed to satisfy your craving for caffeine and coolness, this refreshing, ready-to-drink, cold coffee is an all time favourite.",
                 "price": 119.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -6340,14 +6335,14 @@
                 "name": "Gulab Jamun",
                 "description": "Soft, sweet and dripping with deliciousness, here's India's favourite dessert.",
                 "price": 39.0,
-                "rating": "4.3",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Vanilla Ice Cream",
                 "description": "Luxuriously smooth and creamy that melts effortlessly on the tongue, this vanilla ice cream is sure to give you the chills with it's deliciousness. Serving Size - 100ml",
                 "price": 99.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
@@ -6480,14 +6475,39 @@
         "special_features": [
             "Vegetarian options available"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/lunchbox/lucknow/gomti-nagar"
     },
     {
-        "id": "065e4369-9b47-4cb1-ab47-8b22ca1ec9dd",
+        "id": "a080fc46-6c34-429a-8f22-d2a26f5db34b",
         "name": "Slow Churn Ice Cream Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
+        "menu": [
+            {
+                "name": "Slow Churn Jamun Icecream 500ml (Tub)",
+                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
+                "price": 318.0,
+                "rating": "3.9",
+                "food_type": "Vegetarian"
+            },
+            {
+                "name": "Magnum Almond Ice Cream 80ml",
+                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
+                "price": 84.0,
+                "rating": "4.4",
+                "food_type": "Vegetarian"
+            }
+        ],
+        "special_features": [
+            "Traditional dining experience"
+        ],
+        "contact_info": "07304047007",
+        "url": "https://www.eatsure.com/slow-churn-ice-cream/lucknow/gomti-nagar"
+    },
+    {
+        "id": "b9668e15-eda9-444d-9b1b-0970b1795ab0",
+        "name": "Kwality Walls Dessert and Ice Cream Frozen Desserts and Ice Cream Online in Gomti Nagar, Lucknow",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Signature Dish",
@@ -6500,188 +6520,13 @@
         "special_features": [
             "Traditional dining experience"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
-        "url": "https://www.eatsure.com/slow-churn-ice-cream/lucknow/gomti-nagar"
-    },
-    {
-        "id": "9a3bf0c9-ce9c-44ed-94ee-76ccb785e07d",
-        "name": "Kwality Walls Dessert and Ice Cream Frozen Desserts and Ice Cream Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
-        "menu": [
-            {
-                "name": "Magnum Almond Ice Cream 80ml",
-                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
-                "price": 84.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Feast Cadbury Crackle 70ml",
-                "description": "Experience the delight of Cadbury Crackle chocolate in a Kwality Walls Feast. Every bite has the deliciousness of Cadbury crackle Chocolate with signature hard chocolate. Taste the layers of Happiness",
-                "price": 51.0,
-                "rating": "4.2",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Double Chocolate (Pack of 2)",
-                "description": "Ayummiliciousduoofmilkanddarkchocolatetoppedwithchocolatesauce,chocochipsinacrunchywafflecone.",
-                "price": 68.0,
-                "rating": "4.5",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Black Forest Feast 70ml x 3pcs",
-                "description": "Black Forest cake meets Feast Cake pieces through layers of Feast with a solid chocolate surprise at the end. KcalServing 249",
-                "price": 114.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Magnum Almond Ice Cream 80ml",
-                "description": "Expertly crafted icecream with Madagascar vanilla crunchy Australian almonds and Belgian chocolate.",
-                "price": 84.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Magnum Classic",
-                "description": "",
-                "price": 68.0,
-                "rating": "3.7",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "MAGNUM MINI Multipack Almond & Truffle",
-                "description": "",
-                "price": 240.0,
-                "rating": null,
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Double Chocolate (Pack of 2)",
-                "description": "Ayummiliciousduoofmilkanddarkchocolatetoppedwithchocolatesauce,chocochipsinacrunchywafflecone.",
-                "price": 68.0,
-                "rating": "4.5",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Oreo (Pack of 2)",
-                "description": "(110ml) Oreo cookie chunks in creamy vanilla, delicious chocolate disc and crunchy waffle cone. An all time favourite for cone lovers! Kcal Serving 246",
-                "price": 119.0,
-                "rating": "3.6",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Oreo 110ml",
-                "description": "Oreocookiechunksincreamyvanilla,deliciouschocolatediscandcrunchywafflecone.",
-                "price": 59.0,
-                "rating": "4.2",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Sandwich Chocolate and Vanilla(Single)",
-                "description": "LookingforasweetsnackAheartydelicioussandwichfilledcreamyvanillaandyummychocolatebetweentwocrunchybiscuits.",
-                "price": 30.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Choco Vanilla (Single)",
-                "description": "Ayummiliciousduoofrichandcreamyvanilla",
-                "price": 30.0,
-                "rating": "4.3",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Double Chocolate 105ml",
-                "description": "(105ml) A yummilicious duo of milk and dark chocolate topped with chocolate sauce, chocochips in a crunchy waffle cone. Kcal Serving 184",
-                "price": 34.0,
-                "rating": "4.3",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Black Forest Feast(Single)",
-                "description": "BlackForestcakemeetsFeast",
-                "price": 38.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Feast Cadbury Crackle 70ml",
-                "description": "Experience the delight of Cadbury Crackle chocolate in a Kwality Walls Feast. Every bite has the deliciousness of Cadbury crackle Chocolate with signature hard chocolate. Taste the layers of Happiness",
-                "price": 51.0,
-                "rating": "4.2",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Slow Churn Jamun Icecream 500ml (Tub)",
-                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
-                "price": 318.0,
-                "rating": "3.9",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Slow Churn Mulberry Icecream 500ml (Tub)",
-                "description": "500ml Tub Made in small batches this ice cream is made with artisanal expertise Handpicked fruits & fresh milk cream are swirled together into creamy perfection by Slow Churn.",
-                "price": 318.0,
-                "rating": "4.7",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Dry Fruit Delight Cup 100ml",
-                "description": "(100ml Cup) A Dry Fruit Lover's Paradise! Crunchy Cashew Nuts, Almonds and Delicious Raisins In Every Bite Of Creamy Bite. Kcal Serving: 126",
-                "price": 68.0,
-                "rating": null,
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Dairy Factory Butterscotch",
-                "description": "",
-                "price": 119.0,
-                "rating": null,
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Dairy Factory Vanilla",
-                "description": "",
-                "price": 102.0,
-                "rating": null,
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Sandwich Chocolate and Vanilla (90ml x 2)",
-                "description": "Looking for a sweet snack A hearty delicious sandwich filled creamy vanilla and yummy chocolate between two crunchy biscuits. Kcal Serving: 336",
-                "price": 59.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Cornetto Choco Vanilla x 4",
-                "description": "(105ml) A yummilicious duo of rich and creamy vanilla topped with chocolate sauce and chocochips in a crunchy waffle cone. Kcal Serving: 708",
-                "price": 119.0,
-                "rating": "4.5",
-                "food_type": "Vegetarian"
-            },
-            {
-                "name": "Black Forest Feast 70ml x 3pcs",
-                "description": "Black Forest cake meets Feast Cake pieces through layers of Feast with a solid chocolate surprise at the end. KcalServing 249",
-                "price": 114.0,
-                "rating": "4.4",
-                "food_type": "Vegetarian"
-            }
-        ],
-        "special_features": [
-            "Gluten-free options available"
-        ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/kwality-walls-frozen-dessert-and-ice-creme-shop-ae/lucknow/gomti-nagar"
     },
     {
-        "id": "ac37cdb3-a2f8-41ea-ae1c-51b804840a73",
+        "id": "9eeae4b6-1471-45d3-aa96-52377d7c91d9",
         "name": "Thalaiva Biryani Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Boneless Chicken Biryani",
@@ -6701,7 +6546,7 @@
                 "name": "Egg Biryani",
                 "description": "Served with boiled egg & raita. Aromatic long-grain basmati rice layered with perfectly boiled eggs and a rich blend of bold flavours. A simple yet flavourful explosion in every bite!",
                 "price": 249.0,
-                "rating": null,
+                "rating": "4.1",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -6757,7 +6602,7 @@
                 "name": "Egg Biryani",
                 "description": "Served with boiled egg & raita. Aromatic long-grain basmati rice layered with perfectly boiled eggs and a rich blend of bold flavours. A simple yet flavourful explosion in every bite!",
                 "price": 249.0,
-                "rating": null,
+                "rating": "4.1",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -6946,7 +6791,7 @@
                 "name": "Beetroot Kebab (3 Pc)",
                 "description": "Savour the vibrant, gently spiced flavour of handpicked fresh Beetroot, a perfect blend of crisp and tender goodness",
                 "price": 99.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -6967,49 +6812,49 @@
                 "name": "Paneer Tikka Masala (Serves 1)",
                 "description": "Soft paneer pieces cooked in a thick tomato-based gravy, with just the right amount of spices.",
                 "price": 259.0,
-                "rating": null,
+                "rating": "3.8",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Chicken Tikka Masala (Serves 1)",
                 "description": "Juicy chicken tikka pieces simmered in a creamy, mildly spiced tomato gravy.",
                 "price": 259.0,
-                "rating": null,
+                "rating": "3.8",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Paneer Lababdar (Serves 1)",
                 "description": "Paneer cooked in a rich and creamy onion-tomato gravy, lightly spiced for a delicious meal.",
                 "price": 259.0,
-                "rating": "3.9",
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Chicken Lababdar (Serves 1)",
                 "description": "Tender chicken pieces in a creamy, mildly spiced gravy, perfect for a comforting meal.",
                 "price": 259.0,
-                "rating": "3.7",
+                "rating": "3.8",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Chapati (6 pc)",
                 "description": "Warm & fresh homestyle Chapatis.",
                 "price": 69.0,
-                "rating": "4.2",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Wheat Paratha (3 Pc)",
                 "description": "Pair flavourful curries with this flaky yet fluffy unleavened bread for a delightful dawat.",
                 "price": 69.0,
-                "rating": null,
+                "rating": "3.9",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "2 Veg Biryani Bowls at 205 each",
                 "description": "Who said veg cant be exciting ! Choose any two veg biryani bowls and dive into the rich, aromatic flavors of spices, veggies, and rice.",
                 "price": 410.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -7072,7 +6917,7 @@
                 "name": "Chicken Haleem & Paratha Thali",
                 "description": "One bite and you're hooked. Savoury chicken haleem made of meat, lentils and spices, served with 2 portions of flaky paratha and a side of onion and lemon wedges.",
                 "price": 249.0,
-                "rating": "3.8",
+                "rating": "3.9",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7212,7 +7057,7 @@
                 "name": "Vanilla Ice Cream",
                 "description": "Luxuriously smooth and creamy that melts effortlessly on the tongue, this vanilla ice cream is sure to give you the chills with it's deliciousness. Serving Size - 100ml",
                 "price": 99.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
@@ -7227,14 +7072,13 @@
             "Vegetarian options available",
             "Outdoor seating"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/thalaiva-biryani/lucknow/gomti-nagar"
     },
     {
-        "id": "d7a3414b-e8ad-41ec-ae8b-90c03cdbe6f5",
+        "id": "c2e03a84-a731-45ac-ad01-5ac915570112",
         "name": "Firangi Bake Pasta & Lasagnas Online in Gomti Nagar, Lucknow",
-        "location": "Location information not available",
+        "location": "Gomti Nagar, Lucknow",
         "menu": [
             {
                 "name": "Punjabi Butter Chicken Mac N Cheese Pasta",
@@ -7296,7 +7140,7 @@
                 "name": "Chicken Overload Lasagna",
                 "description": "A meat lovers paradise, this cheesy lasagna is loaded with an Indian classic, chicken kheema and made even more indulgent with the addition of juicy spiced meatballs",
                 "price": 349.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7373,7 +7217,7 @@
                 "name": "Chicken Overload Lasagna",
                 "description": "A meat lovers paradise, this cheesy lasagna is loaded with an Indian classic, chicken kheema and made even more indulgent with the addition of juicy spiced meatballs",
                 "price": 349.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7401,14 +7245,14 @@
                 "name": "Veg Lasagne Combo (Save 10% Extra)",
                 "description": "This delicious spread features creamy, cheesy Veg Lasagne and delectable starters with a choice of beverage or dessert. It is a wholesome fusion packed delight.",
                 "price": 439.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Non-Veg Lasagne Combo (Save 10% Extra)",
                 "description": "This journey includes layers of cheesy and meaty lasagne paired with an irresistable starter and a choice of beverage or dessert will make your heart dance.",
                 "price": 469.0,
-                "rating": "4.6",
+                "rating": "4.5",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7429,14 +7273,14 @@
                 "name": "Veg Italian Indulgence (Save 10% Extra)",
                 "description": "This duo of Veg Pasta and Cheesy Lasagna is a flavor-packed fusion adventure you wouldn't want to miss Paired with a beverage or dessert it's a party for your tastebuds.",
                 "price": 579.0,
-                "rating": "4.6",
+                "rating": "4.5",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Non-Veg Italian Indulgence (Save 10% Extra)",
                 "description": "This fusion packed non-veg combo features Chicken Lasagne and Mac N Cheese along with a choice of beverage or dessert. Grab your forks, folks!",
                 "price": 629.0,
-                "rating": "4.5",
+                "rating": "4.6",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7527,7 +7371,7 @@
                 "name": "Pasta+Starter (Non-Veg)",
                 "description": "Get Set Go! on a flavour explosion with delectable Starters and saucy yet delicious Fusion Pastas",
                 "price": 399.0,
-                "rating": "4.5",
+                "rating": "4.3",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7541,14 +7385,14 @@
                 "name": "Pasta+Dessert (Non Veg)",
                 "description": "Non-Veg Fusion Pastas for your mood and Nice and Sweet Desserts for your soul!",
                 "price": 385.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Pasta+Dessert (Veg)",
                 "description": "Want some Italian with a side of soulful sweet- Veg Fusion Pastas with a side of Delectable Dessert to your rescue!",
                 "price": 359.0,
-                "rating": "4.5",
+                "rating": "4.6",
                 "food_type": "Vegetarian"
             },
             {
@@ -7611,14 +7455,14 @@
                 "name": "Lasagne+Beverages (Non-Veg)",
                 "description": "The goodness of layers of cheese and meaty toppings coming together with refreshing Beverages for the ultimate dining experience",
                 "price": 319.0,
-                "rating": "4.5",
+                "rating": "4.6",
                 "food_type": "Non-Vegetarian"
             },
             {
                 "name": "Lasagne+Beverages (Veg)",
                 "description": "Savor the perfect pairing of comfort and refreshment with this delightful Lasagne & Beverage combo",
                 "price": 315.0,
-                "rating": null,
+                "rating": "3.9",
                 "food_type": "Vegetarian"
             },
             {
@@ -7674,7 +7518,7 @@
                 "name": "Pizza & Lasagna Combo - Veg",
                 "description": "Get spoilt for choice with this exciting combo! Choose 1 each of your favourite vegetarian loaded pizza and cheese-filled lasagna.",
                 "price": 649.0,
-                "rating": null,
+                "rating": "4.1",
                 "food_type": "Vegetarian"
             },
             {
@@ -7688,7 +7532,7 @@
                 "name": "Chicken Overload Lasagna",
                 "description": "A meat lovers paradise, this cheesy lasagna is loaded with an Indian classic, chicken kheema and made even more indulgent with the addition of juicy spiced meatballs",
                 "price": 349.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7793,7 +7637,7 @@
                 "name": "Bhuna Chicken Quesadilla",
                 "description": "( Safely Cooked Chicken) Packed with a punch of desi Indian spices in our bhuna masala quesadilla and topped with chipotle cheese, this delicacy is a grilled taco wrapped in a crisply baked lachha paratha which will delight you with every munch.",
                 "price": 299.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -7835,7 +7679,7 @@
                 "name": "Double Cheese Margherita Medium Pizza (Serves 2)",
                 "description": "Mozzarella Cheese, Parsley. Enjoy this double loaded cheese pizza with rich, creamy Mozzarella cheese and a hint of Parsley.",
                 "price": 430.0,
-                "rating": "4.2",
+                "rating": "4.3",
                 "food_type": "Vegetarian"
             },
             {
@@ -7912,7 +7756,7 @@
                 "name": "Smoky BBQ Chicken Medium Pizza (Serves 2)",
                 "description": "BBQ Chicken, Mozzarella Cheese",
                 "price": 469.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -8080,14 +7924,14 @@
                 "name": "Veg Italian Indulgence",
                 "description": "This duo of Veg Pasta and Cheesy Lasagna is a flavor-packed fusion adventure you wouldn't want to miss Paired with a beverage or dessert it's a party for your tastebuds.",
                 "price": 579.0,
-                "rating": "4.6",
+                "rating": "4.5",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Non-Veg Italian Indulgence",
                 "description": "This fusion packed non-veg combo features Chicken Lasagne and Mac N Cheese along with a choice of beverage or dessert. Grab your forks, folks!",
                 "price": 629.0,
-                "rating": "4.5",
+                "rating": "4.6",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -8122,14 +7966,14 @@
                 "name": "Veg Lasagne Combo",
                 "description": "This delicious spread features creamy, cheesy Veg Lasagne and delectable starters with a choice of beverage or dessert. It is a wholesome fusion packed delight.",
                 "price": 439.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
                 "name": "Non-Veg Lasagne Combo",
                 "description": "This journey includes layers of cheesy and meaty lasagne paired with an irresistable starter and a choice of beverage or dessert will make your heart dance.",
                 "price": 469.0,
-                "rating": "4.6",
+                "rating": "4.5",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -8206,7 +8050,7 @@
                 "name": "Double Omelette & Meatballs with Masala Bread",
                 "description": "Elevate your breakfast with our fluffy double Omelette served with delicious Sausages & soft Masala Kulchas!",
                 "price": 169.0,
-                "rating": "4.5",
+                "rating": "4.4",
                 "food_type": "Non-Vegetarian"
             },
             {
@@ -8367,7 +8211,7 @@
                 "name": "Cold Coffee (200 mL)",
                 "description": "Guaranteed to satisfy your craving for caffeine and coolness, this refreshing, ready-to-drink, cold coffee is an all time favourite.",
                 "price": 119.0,
-                "rating": "4.3",
+                "rating": "4.4",
                 "food_type": "Vegetarian"
             },
             {
@@ -8451,7 +8295,7 @@
                 "name": "Vanilla Ice Cream",
                 "description": "Luxuriously smooth and creamy that melts effortlessly on the tongue, this vanilla ice cream is sure to give you the chills with it's deliciousness. Serving Size - 100ml",
                 "price": 99.0,
-                "rating": "4.1",
+                "rating": null,
                 "food_type": "Vegetarian"
             },
             {
@@ -8472,8 +8316,7 @@
         "special_features": [
             "Vegetarian options available"
         ],
-        "operating_hours": "",
-        "contact_info": "Contact information not available",
+        "contact_info": "07304047007",
         "url": "https://www.eatsure.com/firangi-bake/lucknow/gomti-nagar"
     }
 ]
