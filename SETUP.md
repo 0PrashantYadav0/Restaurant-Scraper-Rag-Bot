@@ -6,39 +6,59 @@ A full-stack **Retrieval-Augmented Generation (RAG)** chatbot that scrapes live 
 
 ---
 
+
+## Install `uv` (CLI helper)
+
+- **macOS:**  
+
+  ```bash
+  brew install uv
+  ```
+
+- **Linux:**
+
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
+
+- **Windows (PowerShell):**
+
+  ```powershell
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+
+- **Or via pip:**
+
+  ```bash
+  pip install uv
+  ```
+
 ## 🚀 Quickstart
 
-1. **Clone & enter** 
+1. **Clone & enter**
 
    ```bash
    git clone https://github.com/0PrashantYadav0/Restaurant-Scraper-Rag-Bot.git
    cd Restaurant-Scraper-Rag-Bot
    ```
 
-2. **Create & activate venv**
+2. **Install deps**
 
    ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-
-3. **Install deps**
-
-   ```bash
-   pip install -r requirements.txt
+   uv add -r requirements.txt
    cd frontend && npm install
    npm run build
    cd ..
    ```
 
-4. **Collect & process data**
+3. **Collect & process data**
 
    ```bash
    uv run main.py --scrape
    uv run main.py --build-kb
    ```
 
-5. **Run servers**
+4. **Run servers**
    - **Backend API**:
 
      ```bash
@@ -47,7 +67,7 @@ A full-stack **Retrieval-Augmented Generation (RAG)** chatbot that scrapes live 
 
      (defaults to http://localhost:8000)  
    - **Frontend UI**:
-   
+
      ```bash
      cd frontend
      npm run dev
@@ -55,7 +75,22 @@ A full-stack **Retrieval-Augmented Generation (RAG)** chatbot that scrapes live 
 
      (defaults to http://localhost:5173)
 
-### Note:
+5. **Run Frontend and Backend in Production Mode** (optional)
+
+   ```bash
+   cd frontend
+   npm run build
+   cd ..
+   uv run main.py --backend
+   ```
+
+   (defaults to http://localhost:8000)
+
+6. **Access the app**
+    - Open your browser and navigate to [http://localhost:5173](http://localhost:5173) for the frontend UI.
+    - The backend API is available at [http://localhost:8000](http://localhost:8000).
+
+### Note
 
 You can also run the backend and frontend in production mode by building the frontend app and serving it with FastAPI. This is useful for deployment or when you want to run everything in a single terminal.
 
@@ -90,34 +125,6 @@ You can also run the backend and frontend in production mode by building the fro
 
 ---
 
-## ⚙️ Detailed Commands
-
-### Install `uv` (CLI helper)
-
-- **macOS:**  
-
-  ```bash
-  brew install uv
-  ```
-
-- **Linux:**
-
-  ```bash
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-  ```
-
-- **Windows (PowerShell):**
-
-  ```powershell
-   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-  ```
-
-- **Or via pip:**
-
-  ```bash
-  pip install uv
-  ```
-
 ### Data Workflow
 
 | Task                        | Command                                 |
@@ -125,26 +132,8 @@ You can also run the backend and frontend in production mode by building the fro
 | Scrape new restaurant data  | `uv run main.py --scrape`               |
 | Build or update KB index    | `uv run main.py --build-kb`             |
 | Run backend server          | `uv run main.py --backend`              |
-
-### Starting Servers
-
-```bash
-# Backend
-uv run main.py --backend
-
-# Frontend
-cd frontend
-npm run dev
-```
-
-**Production build** (optional):
-
-```bash
-cd frontend
-npm run build
-cd ..
-uv run main.py --backend
-```
+| Run frontend server         | `cd frontend && npm run dev`             |
+| Run frontend in production  | `uv run main.py --backend`               |
 
 ---
 
