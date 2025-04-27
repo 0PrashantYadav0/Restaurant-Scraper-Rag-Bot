@@ -1,1 +1,1 @@
-# Restaurant-Rcraper-Rag-Bot
+# Restaurant-Scraper-Rag-Bot

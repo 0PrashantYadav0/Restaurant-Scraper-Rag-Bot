@@ -1,5 +1,5 @@
 [project]
-name = "restaurant-rcraper-rag-bot"
+name = "restaurant-scraper-rag-bot"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
