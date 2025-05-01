@@ -13,7 +13,7 @@ class RestaurantRAGChatbot:
         index_path: str, 
         embeddings_path: str, 
         metadata_path: str,
-        model_name: str = "gpt-3.5-turbo"
+        model_name: str = "gemini-1.5-flash"
     ):
         """
         Initialize the RAG chatbot.
