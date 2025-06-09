@@ -1,4 +1,4 @@
-# Restaurant-Scraper-Rag-Bot
+# ScrapBot
 
 ## Overview
 
